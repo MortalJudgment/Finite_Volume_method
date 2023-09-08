@@ -1,0 +1,383 @@
+\documentclass{beamer}
+%\textwidth=9.5in 
+%\textheight=6in 
+%\topmargin -.7in
+\mode<presentation>{\usetheme{default}\setbeamercovered{invisible}\usecolortheme{crane}}
+\usepackage[utf8]{inputenc} 
+\usepackage[vietnam]{babel}
+\usepackage{xcolor}
+\usepackage{amstext,latexsym,amsbsy,amssymb,amsmath,amsthm}
+\pagenumbering{arabic}
+
+% Định nghĩa khoảng cách, các bạn có thể xóa bỏ phần này
+
+\newcommand{\hh}{\hspace*{.48in}}
+\newcommand{\hz}{\hspace*{.24in}}
+\newcommand{\hhh}{\hspace*{.72in}}
+\newcommand{\nh}{\hspace*{-.12in}}
+\newcommand{\nhh}{\hspace*{-.24in}}
+
+% Định nghĩa các tiêu đề
+
+\renewcommand{\chaptername}{Chương}
+\renewcommand{\appendixname}{PHỤ LỤC}
+\newcommand{\hty}{\rightharpoonup}
+\newcommand{\rong}{\emptyset}
+\newtheorem{tm}{ }
+\newtheorem{dn}{\large Định nghĩa}[section]
+\newtheorem{dly}{\large Định lý}[section]
+\newtheorem{chy}{\large Chú ý}[section]
+\newtheorem{bd}{\large Bổ đề}[section]
+\newtheorem{md}{\large Mệnh đề}[section]
+\newtheorem{hq}{\large Hệ quả}[section]
+\newtheorem{ly}{\large Lưu ý}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{eg}[thm]{Example}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{ntn}[thm]{Notation}
+\newenvironment{prf}{{\noindent \textbf{Proof:}\ }}{\hfill $\Box$\\ \smallskip}
+\numberwithin{equation}{section}
+
+
+% Định nghĩa các công thức toán, các bạn có thể xóa bỏ phần này
+
+\def\inty{\infty}
+
+\def\beqn{\begin{eqnarray}}\def\eeqn{\end{eqnarray}}
+\def\bqq{\[}\def\eqq{\]}
+\def\lef{\lefteqn}
+\def\z{\textstyle }
+\newcommand{\da}[3]{#1\zoz{#2}\zuz{#3}}
+\newcommand{\ssm}[2]{\displaystyle\sum_{\mbox{\scriptsize$\begin{array}{l}
+\mbox{\scriptsize$#1$}\\\mbox{\scriptsize$#2$}\end{array}$}}}
+\newcommand{\lf}[2]{\mbox{\large$\frac{#1}{#2}$}}
+\newcommand{\Lf}[2]{{\displaystyle\frac{\z #1}{\z #2}}}
+\newcommand{\zu}[1]{_{{}_{\z #1}}}
+\newcommand{\zo}[1]{^{\z #1}}
+\newcommand{\zuz}[1]{_{\z{}_{#1}}}
+\newcommand{\zoz}[1]{^{#1}}
+\def\NN{\mbox{$I\hspace{-.06in}N$}}
+\def\ZZ{\mbox{$Z\hspace{-.08in}Z\hspace{.05in}$}}
+\def\QQ{\mbox{$Q\hspace{-.11in}\protect\raisebox{.5ex}{\tiny$/$}
+\hspace{.06in}$}}
+\def\RR{\mbox{$I\hspace{-.06in}R$}}
+\def\CC{\mbox{$C\hspace{-.11in}\protect\raisebox{.5ex}{\tiny$/$}
+\hspace{.06in}$}}
+\def\HH{\mbox{$I\hspace{-.06in}H$}}
+\def\bu{\mbox{$\bullet$}}
+\def\jnt{\displaystyle\int}
+\def\xo{\vspace{.05in}\\\hspace*{5in}\mbox{\huge$\Box$} }
+\newcommand{\ii}[1]{\displaystyle\int_{{}_{\z#1}}}
+\newcommand{\ik}[2]{\displaystyle\int_{{}_{\z #1}}^{\z #2}}
+\def\io{\displaystyle\int_{{}_{\z \Omega}}}
+\def\irn{\ii{\RR^{n}}}
+\newcommand{\iii}[1]{\displaystyle\int\hspace{-.16in}-\hspace{-.06in}\zu{{}\zu{\z#1}}}
+\def\imr{\iii{B(x,3r)}}
+\newcommand{\iR}[1]{\displaystyle\int_{{}_{\z \RR^{#1}}}}
+\newcommand{\ijz}[2]{\displaystyle\int_{{}_{ #1}}^{ #2}}
+\newcommand{\khog}[4]{#1\zuz{#2}\zoz{#3}(#4)}
+\newcommand{\vh}[2]{\langle #1,#2\rangle}
+\def\sij{\displaystyle\sum_{i,j=1}^{n}} \def\sj{\displaystyle\sum_{j=1}^{n}}
+\newcommand{\su}[2]{\displaystyle\sum\zu{#1}\zo{#2}}
+\newcommand{\suz}[2]{\displaystyle\sum\zuz{#1}\zoz{#2}}
+\newcommand{\suu}[4]{\displaystyle\sum_{#1}^{#2}\displaystyle\sum_{#3}^{#4}}
+\newcommand{\sss}[3]{\displaystyle\sum_{\begin{array}{l}\mbox{\W$#1$}\\
+\mbox{\W$#3$}\end{array}}^{#2}}
+\newcommand{\ssso}[3]{{\displaystyle\sum\zu{#1}\zo{#2}}\hspace{-.3in}\zu{{}\zu{
+{}\zu{{}\zu{{}\zu{{}\zu{\zu{{}_{#3}}}}}}}}\hspace{-.12in}}
+\newcommand{\sssss}[5]{{\displaystyle\sum_{#1}^{#2}\displaystyle\sum_{#3}^{#4}}
+\hspace{-.5in}_{{}\zu{{}\zu{{}\zu{{}\zu{{}\zu{{}\zu{{}_{#5}}}}}}}}}
+\newcommand{\ca}[1]{{\cal#1}}
+
+
+%Định nghĩa màu cho chữ viết, các bạn không nên  xóa bỏ phần này
+
+\newcommand{\doo}[1]{\textcolor{red}{#1}}
+\newcommand{\xanh}[1]{\textcolor{green}{#1}}
+\newcommand{\duong}[1]{\textcolor{blue}{#1}}
+\newcommand{\bich}[1]{\textcolor{cyan}{#1}}
+\newcommand{\hong}[1]{\textcolor{magenta}{#1}}
+\newcommand{\vang}[1]{\textcolor{yellow}{#1}}
+
+%Định nghĩa màu cho khung và chữ viết, các bạn không nên  xóa bỏ phần này
+\setbeamercolor{vangxanh}{fg=blue,bg=yellow!20!white}
+\setbeamercolor{vangden}{fg=black,bg=yellow!20!white}
+\setbeamercolor{vangdo}{fg=red,bg=yellow!20!white}
+\setbeamercolor{camden}{fg=black,bg=orange!20!white}
+\setbeamercolor{camxanh}{fg=blue,bg=orange!20!white}
+\setbeamercolor{bichdo}{fg=red,bg=cyan!15!white}
+\setbeamercolor{bichden}{fg=black,bg=cyan!15!white}
+\setbeamercolor{hongxanh}{fg=blue,bg=magenta!15!white}
+\setbeamercolor{hongden}{fg=black,bg=magenta!15!white}
+\setbeamercolor{lado}{fg=red,bg=lime!40}
+\setbeamercolor{laden}{fg=black,bg=lime!40}
+\setbeamercolor{laxanh}{fg=blue,bg=lime!40}
+
+% Định nghĩa một số ký hiệu toán, các bạn có thể xóa bỏ phần này
+
+\newcommand{\id}{{\rm id}}
+\newcommand{\ti}{\tilde}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\cb}{{\rm cb}}
+\newcommand{\CB}{{\rm CB}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\im}{{\rm Im\ \!}}
+\newcommand{\sph}{\mathfrak{S}_1}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\CK}{\mathcal{K}}
+\newcommand{\CL}{\mathcal{L}}
+\newcommand{\OX}{\mathbf{X}} 
+\newcommand{\OY}{\mathbf{Y}}
+\newcommand{\OZ}{\mathbf{Z}}
+\newcommand{\BK}{\mathbf{K}}
+\newcommand{\QS}{\mathcal{Q}}
+\newcommand{\PS}{\mathcal{P}}
+\newcommand{\QM}{{\rm qM}}
+\newcommand{\PM}{{\rm pMor}}
+\newcommand{\M}{{\rm Mor}}
+\newcommand{\st}{{\empty^\ast}}
+\newcommand{\reg}{{\rm reg}}
+\newcommand{\bl}{\left}
+\newcommand{\br}{\right}
+\newcommand{\es}{{\rm es}}
+\newcommand{\bal}{\mathfrak{B}_1}
+\newcommand{\BN}{\mathbb{N}}
+
+
+
+\title{\doo{\bf TỰA BÀI THUYẾT TRÌNH}}
+
+\author{\xanh{Tên người thuyết trình}}
+\institute{\duong{
+Cơ quan đang công tác\\
+Đại học hoặc viện đang công tác}}
+
+\date{\bich{Báo cáo nghiệm thu đề tài cấp , hoặc Hội nghị Khoa Học A}}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+% frame này là danh sách của các tựa của  các \section có trong bài thuyết trình
+ \frametitle{\duong{\LARGE \bf  Nội dung}}
+ \tableofcontents
+\end{frame}
+\section{Cách dùng hướng dẫn này}
+\begin{frame}
+\underline{ \duong{\Large Cách dùng hướng dẫn này}} % tựa của slide tương ứng với frame này 
+\begin{tm}\hong{ Chương trình Beamer dựa trên nền tảng Latex, cho phép chúng ta lập một pdf- file có hiệu ứng animation và font chữ Unicode-Việt.  Các bạn phải học cách sử dụng Latex trước.}\end{tm}
+
+\begin{tm}\duong{So sánh bản tex-file "beamer-unicode-viet.tex" với bản pdf-file "beamer-unicode-viet.pdf", các bạn sẽ biết cách tạo bài trình bày bằng chương trình Beamer.}\end{tm}
+\end{frame}
+\section{Tạo slides}
+\begin{frame}
+\underline{ \duong{\Large Tạo slides}} % tựa của slide tương ứng với frame này 
+
+\medskip    %\medskip dùng để chen các hàng để trống
+
+\hong{ một slide được tạo bởi $\setminus$begin$\{$frame$\}\{$nội dung slide$\}\setminus$end$\{$frame$\}$
+Mỗi frame sẽ tương ứng với một slide, vì thế ta nên liệu nội dung mỗi frame vừa với một slide. }
+ % \
+\medskip
+
+\bich{ \Large {\bf Dùng  $\setminus$medskip  để tách rời các đoạn văn}} \\
+
+\end{frame}
+
+\section{Tô màu}
+\begin{frame}
+\underline{ \duong{\Large Tô màu}} % tựa của slide tương ứng với frame này 
+
+\medskip
+
+\duong{$\setminus$duong$\{$đoạn văn$\}$ để biến các chữ trong đoạn văn này có màu xanh dương}
+
+\medskip
+
+\doo{$\setminus$doo$\{$đoạn văn$\}$ để biến các chữ trong đoạn văn này có màu đỏ}
+
+\medskip
+
+\vang{ $\setminus$vang$\{$đoạn văn$\}$ để biến các chữ trong đoạn văn này có màu vàng}
+
+\medskip
+
+\xanh{ $\setminus$xanh$\{$đoạn văn$\}$ để biến các chữ trong đoạn văn này có màu xanh lá cây}
+
+\medskip
+
+\bich{ $\setminus$bich$\{$đoạn văn$\}$ để biến các chữ trong đoạn văn này có màu xanh ngọc bích}
+
+\medskip
+
+\hong{ $\setminus$hong$\{$đoạn văn$\}$ để biến các chữ trong đoạn văn này có màu hồng}
+\medskip
+
+\end{frame}
+
+
+\begin{frame}
+
+	\begin{beamercolorbox}[sep=.1em,wd=4.8in]{vangxanh}
+  		Khi muốn tô "nền vàng,chữ xanh" một khung  có chiều ngang 4.8in, ta dùng $\setminus$begin$\{$beamercolorbox$\}\{$đoạn văn$\}\setminus$end$\{$beamercolorbox$\}$[sep=.1em,wd=4.8in]$\{$vangxanh$\}\{$đoạn văn$\}\setminus$end$\{$beamercolorbox$\}$\\
+  		Trong đó các bạn có thể thay đổi bề ngang của khung tô màu bằng cách thay đổi tham số $wd=$. Trong một khung, chúng ta có thể chứa nhiều dòng kể cả các công thức. thí dụ \\
+ \begin{equation}
+\int_{\Omega}\nabla v\nabla\varphi dx=\int_{\Omega}f(x,v)\varphi dx,\forall\varphi\in W^{1,2}_0(\Omega).
+\end{equation}
+\end{beamercolorbox}
+
+\medskip
+
+\begin{beamercolorbox}[sep=.1em,wd=4.3in]{vangden}
+  		Khi muốn tô "nền vàng,chữ đen" một khung  có chiều ngang 4.3in, ta dùng $\setminus$begin$\{$beamercolorbox$\}$[sep=.1em,wd=4.3in]$\{$vangden$\}$\\
+  		\hh đoạn văn\\
+  		$\setminus$end$\{$beamercolorbox$\}$	
+\end{beamercolorbox}
+\end{frame}
+
+
+\begin{frame}
+
+\begin{beamercolorbox}[sep=.1em,wd=4.3in]{vangdo}
+"wd=4.3in" và  $\{$vangdo$\}$ cho ta  "nền vàng, chữ đỏ" .
+\end{beamercolorbox}
+
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=4in]{camden}
+  	"wd=4in" và  $\{$camden$\}$ cho ta  "nền cam, chữ đen" .
+\end{beamercolorbox}
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=4.8in]{bichdo}
+  	"wd=4.8in" và  $\{$bichdo$\}$ cho ta  "nền xanh ngọc bich, chữ đỏ" .
+\end{beamercolorbox}
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=4.8in]{bichden}
+  	"wd=4.8in" và  $\{$bichden$\}$ cho ta  "nền xanh ngọc bich, chữ đen" .
+\end{beamercolorbox}
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=3.5in]{hongxanh}
+  	"wd=3.5in" và  $\{$hongxanh$\}$ cho ta  "nền hồng, chữ xanh" .
+\end{beamercolorbox}
+
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=3.5in]{hongden}
+  	"wd=3.5in" và  $\{$hongden$\}$ cho ta  "nền hồng, chữ đen" .
+\end{beamercolorbox}
+
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{lado}
+  	"wd=4.5in" và  $\{$lado$\}$ cho ta  "nền xanh lá cây, chữ đỏ" .
+\end{beamercolorbox}
+
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{laden}
+  	"wd=4.5in" và  $\{$laden$\}$ cho ta  "nền xanh lá cây, chữ đen" .
+\end{beamercolorbox}
+
+\medskip  		
+
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{laxanh}
+  	"wd=4.5in" và  $\{$laxanh$\}$ cho ta  "nền xanh lá cây, chữ xanh" .
+\end{beamercolorbox}
+
+\end{frame}
+\begin{frame}
+	\begin{beamerboxesrounded}[upper=block head,lower=block body,shadow=true]{}
+  		Khi muốn tô nền có chiều dài chuẩn  một khung đoạn văn, ta dùng \\
+  	$\setminus$begin$\{$beamerboxesrounded$\}$\\$[upper=block head,lower=block body,shadow=true]\{\}$ \\	
+  		 đoạn văn \\
+  	$\setminus$end$\{$beamerboxesrounded$\}$
+  	\end{beamerboxesrounded}
+
+\medskip
+
+	\begin{beamerboxesrounded}[upper=block head,lower=block body,shadow=true]{}
+  		$\hh
+\psi (x) = \left\{ \begin{array}{l}
+ 1~~\hhh|x| < 1 \vspace{.04in}\\ 
+\in [0,1]\hh 1\le |x| \le \frac{3}{2}\vspace{.04in}\\
+ 0~~\hhh|x| > \frac{3}{2}. 
+ \end{array} \right.$.
+	\end{beamerboxesrounded}
+\end{frame}
+
+
+
+
+
+\section{Animation}
+\begin{frame}
+\underline{ \duong{\Large Animation}} % tựa của slide tương ứng với frame này 
+
+
+\medskip
+\pause % khi đặt \pause trước một đoạn nào, ta cần bấm enter  để đoạn đó hiện ra
+
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{hongden}
+ Khi đặt $\setminus$pause trước một đoạn nào, ta cần bấm enter  để đoạn đó hiện ra
+ \end{beamercolorbox}
+\medskip
+\pause
+ \duong{Nếu không có $\setminus$pause đoạn văn sẽ tự động hiện ra, không cần chờ ta bấm enter}\\
+\medskip
+\pause
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{vangxanh}
+ Ta có thể dùng $\setminus$pause  trong các bảng \vspace{.2in}\\
+$\begin{tabular}{l|cccc}
+Class & A & B & C & D \\\hline
+X & 1 & 2 & 3 & 4 \pause\\
+Y & 3 & 4 & 5 & 6 \pause\\
+Z & 5 & 6 & 7 & 8
+\end{tabular}$
+\end{beamercolorbox}
+
+\medskip
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{hongden}
+ Ta có thể dùng $\setminus$pause cho các phần  trong một câu \vspace{.2in}\\
+  Để chứng minh điều này  \pause  ta dùng phản chứng
+\end{beamercolorbox}
+\end{frame}
+
+\section{Hoàn tất file trình bày}
+\begin{frame}
+\underline{ \duong{\Large Hoàn tất file trình bày}} % tựa của slide tương ứng với frame này 
+
+\medskip
+
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{laden}
+File trình bày hoàn tất là pdf-file đặc biệt, có những đoạn chúng ta phải bấm enter nó mới hiện ra. Đây là hiệu ứng animation giống như powerpoint-files. Sau khi chuẩn bị xong tex-file, để có pdf-file, ta làm các bước sau	\end{beamercolorbox}
+
+\medskip
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{vangxanh}
+Vào {\bf tools} (trong texmaker) $->$  "{\bf LaTex}" , hoặc bấm {\bf F2}.
+\end{beamercolorbox}
+\medskip
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{hongden}
+Vào {\bf tools} (trong texmaker) $->$ "{\bf Dvi $->$ PS}" , hoặc bấm {\bf F4}.
+\end{beamercolorbox} 
+ \medskip
+\begin{beamercolorbox}[sep=.1em,wd=4.5in]{bichdo} 
+ Đóng tất cả các pdf-files đang mở trên computer của bạn. Vào {\bf tools} (trong texmaker) $->$ "{\bf PS $->$ PDF}" , hoặc bấm {\bf F8}, ta sẽ có pdf-file đặc biệt cần tìm.\end{beamercolorbox}
+
+  \medskip
+ \begin{beamercolorbox}[sep=.1em,wd=4.5in]{laxanh} 
+  Vào {\bf tools} (trong texmaker) $->$  "{\bf View PDF}" , hoặc bấm {\bf F7} để xem pdf-file. Ta có thể dùng  pdf-file này bằng chương trình Acrobat bình thường để trình bày.\end{beamercolorbox}
+  \end{frame}
+\end{document}
+
+

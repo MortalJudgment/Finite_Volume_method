@@ -1,0 +1,802 @@
+%\documentclass[trans]{beamer}
+\documentclass[11pt]{beamer}
+% Class options include: notes, handout, trans
+%                        
+
+% Theme for beamer presentation.
+\usepackage{beamerthemesplit}
+\usepackage{amssymb,amsmath,amsthm,amscd,eufrak}
+\usepackage[all]{xy}
+\usepackage[utf8]{vietnam}
+%=====================================
+%\usetheme{Ilmenau}
+%====================================================
+%\numberwithin{equation}{section}
+\numberwithin{equation}{section}
+
+\def\T{\text}
+
+\frenchspacing
+
+\theoremstyle{plain}
+
+
+
+
+
+
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem{axiom}[theorem]{Axiom}
+
+\theoremstyle{definition}
+
+
+\theoremstyle{remark}
+
+%\newtheorem{example}[theorem]{Example}
+
+\newtheorem{remark}[theorem]{Remark}
+
+
+
+\def\simto{\overset\sim\to}
+
+\def\simleq{\underset\sim<}
+
+\def\simgeq{\underset\sim>}
+
+\def\simle{\underset\sim<}
+
+\def\simge{\underset\sim>}
+
+\def\T{\text}
+
+\def\1#1{\overline{#1}}
+
+\def\2#1{\widetilde{#1}}
+
+\def\3#1{\widehat{#1}}
+
+\def\4#1{\mathbb{#1}}
+
+\def\5#1{\frak{#1}}
+
+\def\6#1{{\mathcal{#1}}}
+
+\def\C{{\4C}}
+
+\def\P{{\6P}}
+
+\def\R{{\4R}}
+
+\def\N{{\4N}}
+
+\def\Z{{\4Z}}
+\def\A{\6A}
+\def\M{\6M}
+\def\N{\6N}
+\def\L{\6L}
+\def\F{\6F}
+\def\H{\6H}
+\def\S{\6S}
+\def\D{\6D}
+\def\La{\Lambda}
+
+%\def\sim<{\underset\sim<}
+
+\def\sumK{\underset{|K|=k-1}{{\sum}'}}
+
+\def\sumJ{\underset{|J|=k}{{\sum}'}}
+
+\def\sumij{\underset {ij=1,\dots,N}{{\sum}}}
+
+\def\Fimu{\mathcal F^{i,\mu}}
+
+\def\CM{\C M}
+\def\ctm{\mathbb{C}T(M)}
+\def\sumijq{\underset {ij\leq q}\sum}
+
+\def\sumjq{\underset {j\leq q}\sum}
+
+\def\sumiorj{\underset {i\T{ or }j\geq q+1} \sum}
+
+\def\sumj{ \underset {j=1}{\overset{n}{\sum}}}
+
+\def\sumi{\underset {i=1,\dots,N}\sum}
+
+
+%00000000000000000000000000000000000000000000000000000000
+
+
+%\numberwithin{equation}{chapter}
+
+\def\T{\text}
+\newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega}
+
+\newcommand{\bom}{\bar{\omega}}
+
+\newcommand{\Dom}{\text{Dom} }
+
+\newcommand{\we}{\wedge}
+
+\newcommand{\no}[1]{\|{#1}\|}
+
+\def\R{{\Bbb R}}
+
+\def\I{{\Bbb I}}
+
+\def\C{{\Bbb C}}
+\def\P{{\6P}}
+\def\B{{\6B}}
+\def\Z{{\Bbb Z}}
+
+\def\la{\langle}
+\def\ra{\rangle}
+\def\di{\partial}
+\def\dib{\bar\partial}
+%\def\Label#1{\label{#1}{\bf(#1)}~}
+\def\Label#1{\label{#1}}
+%====================================================
+
+%\numberwithin{equation}{chapter}
+
+\def\simto{\overset\sim\to}
+
+\def\simleq{\underset\sim<}
+
+\def\simgeq{\underset\sim>}
+
+\def\simle{\underset\sim<}
+
+\def\simge{\underset\sim>}
+
+\def\T{\text}
+
+\def\1#1{\overline{#1}}
+
+\def\2#1{\widetilde{#1}}
+
+\def\3#1{\widehat{#1}}
+
+\def\4#1{\mathbb{#1}}
+
+\def\5#1{\frak{#1}}
+
+\def\6#1{{\mathcal{#1}}}
+
+\def\C{{\4C}}
+
+\def\R{{\4R}}
+
+\def\N{{\6N}}
+
+\def\Z{{\4Z}}
+
+\def\A{\6A}
+
+\def\D{\6D}
+\def\L{\6L}
+\def\J{\6J}
+
+\def\B{{\6B}}
+
+\def\M{\6M}
+
+\def\m{\5m}
+
+\def\La{\Lambda}
+
+%\def\sim<{\underset\sim<}
+
+\def\sumK{\underset{|K|=k-1}{{\sum}'}}
+\def\cmt{\mathbb{C}T(M)}
+
+\def\sumJ{\underset{|J|=k}{{\sum}'}}
+
+\def\sumij{\underset {ij=1,\dots,N}{{\sum}}}
+
+\def\Fimu{\mathcal F^{i,\mu}}
+\def\ctm{\mathbb{C}T(M)}
+\def\CM{\C M}
+
+\def\sumijq{\underset {ij\leq q}\sum}
+
+\def\sumjq{\underset{j=1}{\overset{q_0}\sum}}
+
+\def\sumiorj{\underset {i\T{ or }j\geq q+1} \sum}
+
+\def\sumj{\underset {j=1,\dots,N}{{\sum}}}
+
+\def\sumi{\underset {i=1,\dots,N}\sum}
+
+                    % Enter the date or \today between curly braces
+\usetheme{Frankfurt}
+%\useinnertheme{default}
+\useoutertheme{smoothbars}
+\title[Finite Volume Method]{  \\{\bf\huge Finite Volume Method}\\(Stokes Equation)}   % Enter your title between curly bracesth
+\author{\bf Hoàng Trung Hậu - Đặng Thanh Vương}                 % Enter your name between curly braces
+\institute{\large \textcolor{red}{Finite Volume Method} } % Enter your institute name between curly braces
+\date{ School-year 2017-2018, Ho Chi Minh City}
+
+                    % Enter the date or \today between curly braces
+\usetheme{Frankfurt}
+%\useinnertheme{default}
+\useoutertheme{smoothbars}
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+\section{Giới thiệu bài toán}
+\begin{frame}
+\frametitle{Giới thiệu bài toán} % Table of contents slide, comment this block out to remove it
+%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+Cho $\Omega\in\mathbb{R^{N}}$, $\partial \Omega$ trơn, bị chặn. $f:\Omega\times\mathbb{R}\longrightarrow \mathbb{R}$, $f$ là hàm Carathéodory, và $L:\textsl{D(L)}\subset X\longrightarrow X $ khi $X$ là không gian Hilbert, $D(L)$ là không gian con của $X$, $L$ là ánh xạ tuyến tính xác định trên $D(L)$.\\
+Xét bài toán phi tuyến Dirichlet:
+
+\[
+\begin{cases}
+\begin{array}{c}
+\begin{aligned}
+Lu&=f(x,u)\quad \text{ trong } \quad \Omega\\
+u&=0 \qquad \text{ trên } \quad \partial\Omega
+\end{aligned}
+\end{array} 
+\end{cases} 
+\]
+Và kí hiệu $$F(x,t)=\int_{0}^{t}f(x,s)ds.$$
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+%\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{Một vài tóm tắt định lý điểm dừng và ứng dụng }
+\begin{block}{Đinh Lý 2.1( Định lý 2 trong \cite{YJMM})}
+ Cho $E$ không gian Hilbert, $\Phi \rightarrow R$, $V$ không gian  vector con hữu hạn chiêu của $E$, $W$ phần bù trực giao của $V$, thỏa các tính chất sau đây
+\begin{itemize}
+\item[\textbf{\textit{(i)}}] $\Phi$ thuộc lớp $C^1$
+\item[\textbf{\textit{(ii)}}] $\Phi$ coercive trên $W$.
+\item[\textbf{\textit{(iii)}}] $\Phi$ lõm trên $w+V$ với mọi $w\in W$.
+\item[\textbf{\textit{(iv)}}] $\Phi(v+w) \rightarrow -\infty$ khi $\|v\| \rightarrow \infty$ và hội tụ trên là đều trên tập bị chặn trên $W$.
+\item[\textbf{\textit{(v)}}] $\Phi$ nữa liên tục dưới yếu trên $v+W$ với mọi $v \in V$.
+\end{itemize}
+Khi đó $\Phi$ có điểm dừng trên $E$.
+\end{block}
+\begin{block}{Chứng minh }
+Để chứng minh được định lý này ta cần có các kết quả từ các bổ đề sau.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Một vài tóm tắt định lý điểm dừng và ứng dụng }
+\begin{block}{Bổ Đề 2.1(Bổ đề 3 trong \cite{YJMM})}
+  Với mọi $w\in W$, tồn tại $v=v(w)\in V$ sao cho $$\Phi \left ( v+w \right )=\max_{g\in V}\Phi \left ( v+w \right )$$ 
+\end{block}
+Chứng minh: ta chứng minh $v_n\in V$ thỏa: $$\Phi \left ( v_n+w \right )\rightarrow \max_{g\in V}\Phi \left ( v+w \right )$$ là bị chặn và kết luận nhờ tính hữu hạn chiều của $V$.
+
+\end{frame}
+
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\textbf{Ta kí hiệu: }
+$$ V(w)=\{ v \in V| \Phi( v+w ) =\max_{g\in V} \Phi( g+w ) \} $$ 
+Và $$S=\left \{ u=v+w|w\in W ,v\in V(w)\right \}$$
+
+\begin{block}{Bổ Đề 2.2(Bổ đề 4 trong \cite{YJMM})}
+ Tồn tại  $u \in S$ sao cho 
+ \begin{align}
+ \Phi \left ( u \right )=\inf_{S}\Phi 
+ \label{lem4}
+ \end{align}
+\end{block}
+Chứng minh: Lấy $u_n\in S$ sao cho: $\Phi(u_n)\rightarrow \inf_S\Phi$, ta chứng minh tồn tại dãy con $u_{n_k}\in S,w\in W$, sao cho: $$\Phi \left ( v+w \right )\leq \lim_{n\rightarrow \infty }\inf\Phi \left (u_{n_k}  \right )=\inf_{S}\Phi,\forall v\in V$$
+và từ đó kết luận
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Một vài tóm tắt định lý điểm dừng và ứng dụng }
+\begin{block}{Bổ Đề 2.3( Bổ đề 5 trong \cite{YJMM})}
+Ta định nghĩa $P$ phép chiếu vuông góc từ $E$ vào $W$, và $I$ ánh xạ đồng nhất trên $E$. Với $u \in S$ thỏa $\Phi(u) =\inf_S \Phi$ khi đó
+\begin{align}
+(I-P)\nabla \Phi (u) =0 
+\label{Chieu}
+\end{align}
+\end{block}
+Ta dùng Riez để có $$D\Phi(u)(e)= \langle \nabla \Phi(u) , e \rangle  \quad \forall e \in E $$
+Ta sẽ chứng minh là:
+\[\langle \nabla \Phi(u) , g \rangle =0 \quad \forall g \in V.\]
+Và từ đó kết luận.
+\end{frame}
+%------------------------------------------------
+
+
+\begin{frame}
+\begin{block}{Bổ Đề 2.4(Bổ đề 6 trong \cite{YJMM})}
+ Với mỗi $w \in W$. Chứng minh $V(w)$ lồi.
+\end{block}
+Chứng minh: Ta sẽ dùng tính lõm của $\Phi$ trên $w+V$ để chứng minh là: Với $\lambda \in [0,1], v_1,v_2\in V(w)$
+\[\Phi(\lambda v_1 +(1-\lambda)v_2+w) \geq \lambda \Phi(v_1+w) + (1-\lambda )\Phi(v_2+w)=\max_{v \in V} \Phi(v+w)\]
+và từ đó kết luận.
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Một vài tóm tắt định lý điểm dừng và ứng dụng }
+\begin{block}{Bổ Đề 2.5(Bổ đề 7 trong \cite{YJMM})}
+Chứng minh với mọi $w \in W$, ta có $L(w)$ lồi, với
+  \[ L(w)= \{ P \nabla \Phi(v+w) \mid v \in V(w)\}\]
+\end{block}
+Chứng minh: Với $v_1,v_2\in V(w),\lambda \in [0,1],v_{\lambda}=(\lambda v_1 +(1-\lambda)v_2$.
+Ta sẽ chứng minh là: $$\lambda ( \Phi (v_1+w+th)-\Phi(v_1+w )) + (1-\lambda ) (\Phi(v_2+w+th)-\Phi(v_2+w))$$$$\leq \Phi(v_\lambda +w+th)-\Phi(v_\lambda +w)$$
+Từ đó ta có là (chia hai trường hợp $t>0$ và $t<0$ ) :
+$$\lambda P \nabla \Phi(v_1+w) + (1-\lambda )P \nabla \Phi (v_2 +w) = P \nabla \Phi(v_\lambda +w)$$
+và từ đó kết luận
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\begin{block}{Bổ Đề 2.6}
+Chứng minh $L(w)$ đóng với mọi $w \in W$
+(Bổ sung của chứng minh)
+\end{block}
+Ta sẽ chứng minh là $V(w)$ là tập đóng trước rồi kết luận nhờ tính hữu hạn chiều của $V$ và $\Phi$ là lớp $C^1$.
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Một vài tóm tắt định lý điểm dừng và ứng dụng }
+\begin{block}{Bổ Đề 2.7(Bổ đề 8 trong \cite{YJMM})}
+ Cho $u \in S$ thỏa \eqref{lem4} và $w=Pu$ khi đó $L(w)$ chứa 0. Và do đó tồn tại $v \in V(w)$ sao cho 
+\[ \nabla \Phi(v +w)=0\]
+\end{block}
+Chứng minh: Ta sẽ phản chứng và dùng tính chất lồi đóng của $L(w)$, tồn tại $h_1\in L(w)$ sao cho: $$||h_1||\neq 0$$
+Đặt $w_{t}=w+th_1,|t|\leq 1$. Và $v_t\in V(w_t)$. Ta sẽ lần lượt chứng minh là $w_t$ bị chặn, $v_t$ bị chặn. Cuối cùng ta sử dụng định lý trung bình trên $\mathbb{R}$ để kết luận là $h_1=0$. Suy ra mâu thuẫn và từ đó kết luận.
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\begin{block}{Chứng minh định lý 2.1:}
+Do đó $0\in L(w)$. Vậy tồn tại $v \in V(w)$ sao cho $P \nabla \Phi(v+w)=0$. Hay
+\[\langle \nabla \Phi (v+w) ,h \rangle =0 \quad h \in W\]
+Mặc khác theo bổ đề 2.3, ta lại có:
+\[\langle \nabla \Phi (v+w) ,g \rangle =0 \quad g \in V\]
+Vậy nên ta có
+\[\langle \nabla \Phi (v+w) ,e \rangle =0 \quad e \in E\]
+Hay \[\nabla \Phi (v+w)=0\]
+Và $u=v+w$ chính là điểm dừng của $\Phi$ cần tìm.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Một số biến thể của các kết quả trên}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Một số biến thể của các kết quả trên}
+\noindent Ta nói $\Phi : X =V \oplus W \rightarrow R$ có dạng $ \jmath$ nếu
+\begin{itemize}
+\item[$\jmath_1$ ] $\Phi =q +\Psi$
+\item[$\jmath_2$ ] $\Psi$ liên tục yếu
+\item[$\jmath_3$ ] $q(v+w)=q(w)+q(v)$ với mọi $v \in V$ và $w \in W$ 
+\item[$\jmath_4$ ]   $q$ nửa liên tục yếu trên $V$
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Một số biến thể của các kết quả trên}
+\begin{block}{Đinh Lý 2.2( Đinh lý 11 trong \cite{YJMM})}
+Cho $H$ không gian HIlbert $H=V \oplus W$ với V không gian vector con đóng của H và $W = V^{\perp}$ . $\Phi$ thỏa điều kịên $ \jmath$  và thỏa các điều kiện sau đây
+\begin{itemize}
+\item[\textbf{\textit{(i)}}]  $q$ và $\Psi$ thuộc lớp $C^1$
+\item[\textbf{\textit{(ii)}}]  $\Phi$ coercive trên $W$
+\item[\textbf{\textit{(iii)}}]  $\Phi$ lõm trên $w+V$ với mọi $w \in W$
+\item[\textbf{\textit{(iv)}}]  $\Phi(v+w) \rightarrow -\infty$ khi $\|v\| \rightarrow \infty $ và hội tụ trên là đều trên tập bị chặn trên $W$
+\item[\textbf{\textit{(v)}}] $\Phi$ nữa liên tục dưới yếu trên $v+W$ với mọi $v \in V$.
+\item[\textbf{\textit{(vi)}}]  Đạo hàm $\Phi$ liên tục yếu trên $H$.
+\end{itemize}
+Khi đó  $\Phi$ có điểm  dừng trên $H$.
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Chứng minh Định Lý 2.2}
+Phần lớn chứng minh là tương tự với định lý 2.1. Chỉ khác phần chứng minh $L(w)$ đóng do lúc này ta chỉ có $V$ đóng mà không có tính hữu hạn chiều nên chỉ có tính hội tụ yếu và do đó ta cần tính chất là:\\
+ Nếu $v_n \rightharpoonup v$ thì \[(\nabla \Phi(v_n+w), h ) \rightarrow (\nabla \Phi(v_0+w), h) ,\forall h \in H\] 
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Một số biến thể của các kết quả trên}
+\begin{block}{Đinh Lý 2.3( Đinh lý 13 trong \cite{YJMM})}
+Cho $E$ không gian Hilbert, $\Phi \rightarrow R$, $V$ không gian  vector con hữu hạn chiêu của $E$, $W$ phần bù trực giao của $V$, thỏa các tính chất sau đây
+\begin{itemize}
+\item[\textbf{\textit{(i)}}] $\Phi$ thuộc lớp $C^1$
+\item[\textbf{\textit{(ii)}}]  $\Phi$ coercive trên $W$.
+\item[\textbf{\textit{(iii)}}]  $\Phi$ strictly quasi concave trên $w+V$ với mọi $w\in W$ i.e:\\
+$\forall x,y \in w+V , \lambda \in (0,1)$ thì : $\Phi(\lambda x+(1-\lambda)y)> min \{\Phi(x),\Phi(y)\}$
+\item[\textbf{\textit{(iv)}}] $\Phi(v+w) \rightarrow -\infty$ khi $\|v\| \rightarrow \infty$ và hội tụ trên là đều trên tập bị chặn trên $W$.
+\item[\textbf{\textit{(v)}}]  $\Phi$ nữa liên tục dưới yếu trên $v+W$ với mọi $v \in V$.
+\end{itemize}
+Khi đó $\Phi$ có điểm dừng trên $E$.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+
+\begin{frame}
+\begin{block}{Chứng minh Định Lý 2.3}
+Trong trường hợp này thì $L(w)$ và $V(w)$ chỉ có 1 phần tử bằng cách:\\
+Gỉa sử: $\exists v_1,v_2\in V(w),v_1\neq v_2$ thì áp dụng (iii), ta có là:
+$$\Phi(\lambda v_1+(1-\lambda)v_2+w)=\Phi(\lambda (v_1+w)+(1-\lambda)(v_2+w))$$
+$$> min \{\Phi(v_1+w),\Phi(v_2+w)\}=max_{g\in V}\Phi(g+w)$$.
+Còn lại thì tương tự hai định lý trên!
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+\section{Ứng Dụng}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\noindent Cho $\Omega \subset \mathbb{R}^m,$ mở biên trơn bị chặn .
+Xét :
+\[
+\begin{cases}
+\begin{array}{c}
+\begin{aligned}
+-\Delta u(x)&=\lambda_k u(x)+D_uF(x,u(x))\quad \text{ trong } \quad \Omega\\
+u&=0 \qquad \text{ trên } \quad \partial\Omega
+\end{aligned}
+\end{array} 
+\end{cases} \tag{\textbf{P}}
+\]
+Chứng minh là phương trình trên có nghiệm yếu .
+
+\noindent Ta có là :
+$$V_1=H^1_0(\Omega).$$
+$$D(L)=H^2(\Omega)\cap H^1_0(\Omega).$$
+%$$D(L)=H^2(\Omega)\cap H^1_0(\Omega).$$
+$$L=-\Delta-\lambda_k Id$$
+
+($\lambda_k$ là trị riêng thứ $k$ của $-\Delta$). 
+
+\noindent Lúc đó thì : $$L:D(L)\subset V_1\longrightarrow L^2(\Omega)$$
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}
+\noindent Xét hàm $F:\Omega \times \mathbb{R}\longrightarrow \mathbb{R}$ có dạng : $F(x,u)$ là hàm thỏa:
+\begin{itemize}
+\item[\textbf{\textit{(i)}}] $F$ là lồi và khả vi theo $u$ với hầu hết $x\in \Omega$.
+\item[\textbf{\textit{(ii)}}] $F$ là đo được với mọi $u\in \mathbb{R}$.
+\end{itemize}
+\end{block}
+\begin{block}{Các tính chất của $F$:}
+\begin{itemize}
+\item[\textbf{\textit{(F1)}}] Tồn tại $l\in L^2(\Omega),\beta \in L^2(\Omega)$, $\beta >0$ sao cho : $$F(x,u) \geq l(x)u-\beta(x)$$
+với mọi $u\in \mathbb{R}$, hấu hết $x$ trên $\Omega $
+\item[\textbf{\textit{(F2)}}] $D_uF(.,u(.))\in V_1$ với mọi $u\in D(L)$
+\end{itemize}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Các tính chất của $F$:}
+\begin{itemize}
+\item[\textbf{\textit{(F3)}}]  Với mọi $\eta  >0$ , tồn tại $\beta_{\eta}\in L^2(\Omega),\beta_{\eta}\geq 0$ sao cho : $$F(x,u)\leq (\alpha(x)+\eta)\frac{|u|^2}{2}+\beta_{\eta}(x)$$
+với hầu hết $x\in \Omega$ với mọi $u\in \mathbb{R}$ , $\alpha \in L^{\infty}(\Omega)$ với $\inf ess \alpha(x)>0$ và $\alpha(x)\leq \mu_1$ và lớn hơn hẳn trên các tập đo đo dương .$\mu_1$ là trị riêng dương đầu tiên của $L$ .
+\item[\textbf{\textit{(F4)}}] $\int_{\Omega}F(x,\widehat{u}(x))dx \rightarrow \infty$ khi $||\widehat{u}||\rightarrow \infty$ khi $\widehat{u}$ trong $Ker(L)$.
+\end{itemize}
+\end{block}
+Kí hiệu $D_uF(x,u)$ là chỉ đạo hàm theo biến thứ 2 của $F$.\\
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Ta đưa bài toán về nghiệm yếu (bỏ qua vài bước ):}
+$$\int _{\Omega}\nabla u(x)\nabla v(x)dx=\int _{\Omega}\lambda_k u(x)v(x)dx+\int _{\Omega}D_uF(x,u(x))v(x)dx$$
+$$\int _{\Omega}\nabla u(x)\nabla v(x)dx-\lambda_k\int _{\Omega} u(x)v(x)dx=\int _{\Omega}D_uF(x,u(x))v(x)dx$$
+$$\forall v\in V_1$$
+\end{block}
+\begin{block}{Bài toán biến phân của nó là : }
+$$\Phi(u)=\frac{1}{2}\int_{\Omega}|\nabla u(x)|^2dx-\frac{\lambda_k}{2}\int _{\Omega} |u(x)|^2dx-\int_{\Omega}F(x,u(x))dx$$
+với $u\in V_1$\\
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Các Chuẩn}
+Chuẩn của $L^2(\Omega)$ là : $$||u||_{L^2}=\sqrt{\int_{\Omega}| u(x)|^2dx}.$$
+Chuẩn của $H^1_0(\Omega)$ là $$||u||_{H^1_0}=\sqrt{\int_{\Omega}|\nabla u(x)|^2dx}.$$
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Ta cần tính chất sau :}
+Tồn tại $\{e_n\}\in C^{\infty}(\overline{\Omega})$ là họ trực giao tối đại (họ trực giao này khác 0 với mọi $n$) trong $L^2$ (thậm chí họ này còn là trực giao tối đại trên $H_0^1$) và 1 dãy $0<\lambda_n$ tăng ngặt về vô cùng sao cho:
+\[
+\begin{cases}
+\begin{array}{c}
+\begin{aligned}
+-\Delta u(x)&=\lambda_n e_n(x)\quad \text{ trong } \quad \Omega\\
+ e_n&=0\qquad \text{ trên } \quad \partial\Omega
+\end{aligned}
+\end{array} 
+\end{cases}
+\]
+\end{block}
+\begin{block}
+\noindent Các không gian sinh bởi các trị riêng này là $E_i$ và $dim E_i=1$.\\
+Lúc đó:
+\begin{align*}
+Ker(L)=E_k,A=\{u\in V\setminus\{0\}|\exists \lambda<0-\Delta u=(\lambda+\lambda_k) u\}
+\end{align*}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Tính chất của  $E_i$:}
+Ta có :$$<A>=\bigoplus_{i=1}^{k-1}E_i$$
+Và đặt $$H^{-}=\bigoplus_{i=1}^{k-1}E_i$$
+$$B=\{u\in V|\exists \lambda>0 ,-\Delta u=(\lambda+\lambda_k) u\}$$
+\end{block}
+\begin{block}{Tương tự ta có là : }
+$$
+B=\bigoplus_{i=k+1}^{\infty}E_i,H^{+}=\overline{<B>}_{L^2}
+$$
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Bổ đề 2.9(Bổ đề nhỏ)} Cho $A\subset H^1_0{(\Omega)}$ , lúc đó $A\subset L^2(\Omega)$. Gỉa sử $A$ đóng trong $L^2$ với chuẩn $L^2$.Chứng minh là $A$ đóng trong $H^1_0$ với chuẩn $H^1_0$.
+\end{block}
+\begin{block}{Chứng minh Bổ đề 2.9}
+Lấy $u_n\in A$ sao cho : $u_n\rightarrow u$ trong $H^1_0 $.Chứng minh là $u\in A$. 
+Do bất đẳng thức Poincare : $$\int_{\Omega}|w(x)|^2dx\leq \frac{1}{\lambda_1}\int_{\Omega}|\nabla w(x)|^2dx,\forall w\in H^1_0$$
+Nên ta có là $u_n\rightarrow u$ trong $L^2$ .Do tính đóng của $A$ trong $L^2$ nên ta có là $u\in A$. Từ đó ta có là $A$ đóng trong $H^1_0$ .
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Bổ đề 2.10 (Bổ đề về dạng toàn phương)}
+Cho $H$ là không gian Hilbert. Cho $a:H\times H\rightarrow \mathbb{R}$ là song tuyến tính .Gỉa sứ là $$a(u,u)\geq 0,\forall u $$
+Lúc đó đặt $f(u)=a(u,u)$ thì $f$ lồi !.\\
+$f$ còn gọi là dạng toàn phương . Và $f(u)\geq 0 $ là dạng toàn phương dương .
+\end{block}
+\begin{block}{Chứng minh Bổ đề 2.10}
+Ta chỉ cần chứng minh được là :
+$f(tu+(1-t)v)-tf(u)-(1-t)f(v)=-t(1-t)a(u-v,u-v)$
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\noindent Từ đó ta có $H^+$ đóng trong cả $L^2$ và $H^1_0$ theo cả hai chuẩn khác nhau .\\
+Ta có thể chứng minh nhờ tính tối đại của họ trực giao và tính đóng của $H^+$ là: $$H^1_0=Ker(L)\oplus H^{-}\oplus H^{+}$$
+$$L^2=Ker(L)\oplus H^{-}\oplus H^{+}$$
+Và $(Ker(L)\oplus H^{-})^{\perp}=H^{+}$ (theo chuẩn $H^1_0$ lẫn $L^2$)\\
+Từ đây ta có thể chỉ ra là :$$\mu_1=\lambda_{k+1}-\lambda_{k}$$
+Gọi $\{ \mu_n \}_{n\in B}$ ,$B$ đếm được nào đó là các trị riêng của $L$ thì ta có là :
+Các trị riêng âm là : $\mu_{-1}=\lambda_{k-1}-\lambda_k$ (trị riêng âm đầu tiên),.... $\mu_{-k+1}=\lambda_{1}-\lambda_{k}$.\\
+
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+Trị riêng 0 là : $\mu_0=\lambda_k-\lambda_k=0$.\\ 
+Các trị riêng dương là : $\mu_{1}=\lambda_{k+1}-\lambda_k$,...,$\mu_{n}=\lambda_{k+n}-\lambda_k$,....\\
+Bây giờ ta sẽ áp dụng định lý 1 để giải bài này .
+\noindent  Chọn :
+\begin{align*}
+H&=V_1=H_{0}^1,\\
+V&=ker(L)\oplus H^{-},\\
+W&=H^{+}.
+\end{align*}
+Ta có thể kiểm tra $ker(L)\oplus H^{-}$ hữu hạn chiều phù hợp với định lý 2.1.\\
+Ta chỉ cần chứng minh các tính chất trên cho $\Phi$ là đủ .\\
+Chứng minh (Chia làm nhiều phần):\\
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{$\Phi$ là một hàm $C^1$.}
+Ta cần chứng minh là : Có $d\in L^1,h\in L^2$ và hai hằng số $c,g\geq 0$:
+$$|F(x,u_2)|\leq c\frac{|u_2|^2}{2}+d(x)$$
+$$|D_uF(x,u_1)|\leq g|u_1|+h(x),\forall u_1\in \mathbb{R},\forall x\in \Omega.$$
+\end{block}
+\begin{block}{$\Phi$ lõm trên $w+V$ với $w\in W$.}
+Ta chia $\Phi$ thành 2 phần là : $\Lambda(u)=\int_{\Omega}F(x,u(x))dx$ và $q(u)=\frac{1}{2}\int_{\Omega}|\nabla u(x)|^2dx-\frac{\lambda_k}{2}\int _{\Omega} |u(x)|^2dx$ và $\Phi=q-\Lambda$ và sẽ chứng minh lõm trên từng phần.
+\end{block}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+
+\begin{frame}
+\begin{block}{$\Phi$ là hàm nửa liên tục yếu trên $v+W$ với $v\in V$.}
+
+Phần $q$ ta sẽ dùng tính lồi trên $v+W$ và liên tục là có nửa liên tục yếu !
+
+Phần $\Lambda$ thì ta sẽ dùng tính nhúng compact của $H^1_0$ vào $L^2$ và tính liên tục trên $L^2$ để chứng mính $\Lambda$ liên tục yếu theo dãy. Và từ đó có kết luận.
+
+\end{block}
+\begin{block}{$\Phi$ corecive trên $W$}
+Ta đặt :$$p(u)=\frac{1}{2}\int_{\Omega}|\nabla u(x)|^2dx-\frac{\lambda_k}{2}\int _{\Omega} |u(x)|^2dx-\frac{1}{2}\int_{\Omega}\alpha(x)|u(x)|^2dx$$
+Ta chứng minh là :$$p(u)\geq \delta ||u||^2_{H^1_0},\forall u\in W$$
+Và từ đó ta có là với $\eta$ thích hợp :$$\Phi(u)\geq \frac{\delta}{2}||u||_{H^1_0}-||\beta_{\eta}||_{L^1},\forall u\in W$$
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{$\Phi(v+w)\rightarrow -\infty$ khi $||v||\rightarrow \infty$ và hội tụ này là đều trên các tập bị chặn trên $W$.}
+\begin{itemize}
+\item[TH1].Với $k=1$. $v\in V$ Ta sẽ chứng minh :
+$$\Phi(v+w)\leq -2 \int_{\Omega}(F(x,\frac{1}{2} v(x))dx+C\frac{\mu_1+1}{2}+||\beta||_{L^1}$$
+\item[TH2].Với $k>1$. Xét $v\in V$ thì tồn tại $v^0\in Ker(L),v^{-}\in H^{-}$ sao cho : $$v=v^0+v^{-}$$
+Ta sẽ cần bổ đề ở dưới để chứng minh :
+\end{itemize}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng Dụng}
+\begin{block}{Bổ Đề 2.11( Bổ đề 6 trong \cite{YJMM})}
+Với $F:\mathbb{R}\rightarrow \mathbb{R} $ lồi thì với $v,w\in \mathbb{R},n\in \mathbb{N}$ ta có là :
+$$F(\frac{v}{2^{2n-1}})\leq \frac{1}{2^{2n-1}}F(v+w)+\sum_{p=1}^{2n-1}\frac{1}{2^p}F(\frac{(-1)^p w}{2^{2n-1-p}})$$
+$$-F(v+w)\leq -2^{2n-1}F(\frac{v}{2^{2n-1}})+\sum_{p=1}^{2n-1}\frac{2^{2n-1}}{2^p}F(\frac{(-1)^p w}{2^{2n-1-p}})$$
+\end{block}
+\begin{block}{Chứng minh Bổ Đề 2.11}
+Bằng quy nạp ta có điều cần chứng minh.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Ứng dụng:}
+\begin{block}{Chứng minh điều trên:}
+Ta sẽ dùng bổ đề trên để chứng minh là : tồn tại $T,G>0$ 
+$$\Phi(v+w) \leq -T||v^-||^2_{H^1_0}-2^{2n}\int_{\Omega}F(x,\frac{v^0(x)}{2^{2n-1}})dx+G,\forall v\in V $$
+\end{block}
+Từ đây ta có :
+\begin{block}{Kết luận :}
+Áp dụng 2.1 và ta có điểm dừng của hàm $\Phi$ và đó là nghiệm yếu của bài toán cần tìm !
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Kết Luận}
+Trong báo cáo tiểu luận này chúng tôi đã làm được những việc sau:
+\begin{itemize}
+\item[1.] Giới thiệu lại các kiến thức cơ bản về không gian $L^{p}(\Omega)$, $W^{1,p}(\Omega)$, toán tử Nemytskii, hàm nửa liên tục dưới yếu và hàm lồi để phục vụ cho việc làm luận văn này.(Chi tiết xem bản đính kèm)
+\item [2.] Chúng tôi tập chung kiểm tra, chứng minh  lại chi tiết các bổ đề trong bài báo \cite{YJMM} mà các tác giả đã bỏ qua chứng minh chi tiết.
+\end{itemize}
+
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{References}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo.}
+\indent
+\begin{thebibliography}{10}
+
+
+\bibitem{Brezis} H. Brezis.: Functional Analysis, Sobolev spaces
+and Partial Differential Equatios, Springer, 2011.
+
+\bibitem{YJMM} Y. Jabri and M. Moussaoui, Critical point theorem without compactness and applications , Nonlinear Analysis, Theory, Methods  - Applications, Vol. 32, No. 3, pp. 363-380, 1998.
+
+\bibitem{Figueredo} D.G. De Figueredo.: Lectures on the Ekeland variational
+principle with applications and detours, Tata institute of fundamental
+research, Bombay 1989
+\bibitem{Mawhin} J. Mawhin, M. Willem.: Critical Point Theory and
+Hamiltonian Systems, Springer, Berlin (1989). 
+
+\bibitem{WR} Walter Rudin, Real and Complex Analysis, third edition, international edition 1987.
+\end{thebibliography}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Xin Cám Ơn Tất Cả Các Thầy,Cô}}
+\Huge{\centerline{và}}
+\Huge{\centerline{Các Bạn Đã Lắng Nghe}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

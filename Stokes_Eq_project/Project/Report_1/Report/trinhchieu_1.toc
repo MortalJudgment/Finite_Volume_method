@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u b\IeC {\`a}i to\IeC {\'a}n}{2}{0}{1}
+\beamer@sectionintoc {2}{M\IeC {\d \ocircumflex }t s\IeC {\'\ocircumflex } bi\IeC {\'\ecircumflex }n th\IeC {\h \ecircumflex } c\IeC {\h u}a c\IeC {\'a}c k\IeC {\'\ecircumflex }t qu\IeC {\h a} tr\IeC {\^e}n}{12}{0}{2}
+\beamer@sectionintoc {3}{\IeC {\'\UHORN }ng D\IeC {\d u}ng}{17}{0}{3}
+\contentsline {chapter}{T\IeC {\`a}i li\IeC {\d \ecircumflex }u tham kh\IeC {\h a}o.}

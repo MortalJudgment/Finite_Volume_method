@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Kh\IeC {\^o}ng gian lo\IeC {\d a}i thu\IeC {\`\acircumflex }n nh\IeC {\'\acircumflex }t}{2}{0}{1}
+\beamer@sectionintoc {2}{To\IeC {\'a}n t\IeC {\h \uhorn } Laplace v\IeC {\`a} Gi\IeC {\h a}i t\IeC {\'\i }ch Euclide}{17}{0}{2}
+\beamer@sectionintoc {3}{To\IeC {\'a}n t\IeC {\h \uhorn } nhi\IeC {\d \ecircumflex }t v\IeC {\`a} m\IeC {\d \ocircumflex }t metric d\IeC {\d i} h\IeC {\uhorn }\IeC {\'\ohorn }ng tr\IeC {\^e}n $\mathbb {R}^{n+1}$}{26}{0}{3}
+\beamer@sectionintoc {4}{Nh\IeC {\~\uhorn }ng to\IeC {\'a}n t\IeC {\h \uhorn } tr\IeC {\^e}n nh\IeC {\'o}m }{39}{0}{4}

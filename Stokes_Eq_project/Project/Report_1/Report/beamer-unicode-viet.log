@@ -1,0 +1,33 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=latex 2018.6.13)  13 JUN 2018 19:56
+entering extended mode
+**./beamer-unicode-viet.tex
+(beamer-unicode-viet.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+(beamer.cls
+Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
+(beamerbasemodes.sty
+
+! LaTeX Error: File `etoolbox.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.16 
+      
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 26 strings out of 493306
+ 540 string characters out of 3145411
+ 53822 words of memory out of 3000000
+ 3668 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 24i,0n,11p,190b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

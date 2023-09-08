@@ -1,0 +1,1011 @@
+%\documentclass[trans]{beamer}
+\documentclass[11pt]{beamer}
+% Class options include: notes, handout, trans
+%                        
+
+% Theme for beamer presentation.
+\usepackage{beamerthemesplit}
+\usepackage{amssymb,amsmath,amsthm,amscd,eufrak}
+\usepackage[all]{xy}
+\usepackage[utf8]{vietnam}
+%=====================================
+%\usetheme{Ilmenau}
+%====================================================
+%\numberwithin{equation}{section}
+\numberwithin{equation}{section}
+
+\def\T{\text}
+
+%\def\Label#1{\label{#1}}
+
+\frenchspacing
+
+\theoremstyle{plain}
+
+
+
+
+
+
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem{axiom}[theorem]{Axiom}
+
+\theoremstyle{definition}
+
+
+\theoremstyle{remark}
+
+%\newtheorem{example}[theorem]{Example}
+
+\newtheorem{remark}[theorem]{Remark}
+
+
+
+\def\simto{\overset\sim\to}
+
+\def\simleq{\underset\sim<}
+
+\def\simgeq{\underset\sim>}
+
+\def\simle{\underset\sim<}
+
+\def\simge{\underset\sim>}
+
+\def\T{\text}
+
+\def\1#1{\overline{#1}}
+
+\def\2#1{\widetilde{#1}}
+
+\def\3#1{\widehat{#1}}
+
+\def\4#1{\mathbb{#1}}
+
+\def\5#1{\frak{#1}}
+
+\def\6#1{{\mathcal{#1}}}
+
+\def\C{{\4C}}
+
+\def\P{{\6P}}
+
+\def\R{{\4R}}
+
+\def\N{{\4N}}
+
+\def\Z{{\4Z}}
+\def\A{\6A}
+\def\M{\6M}
+\def\N{\6N}
+\def\L{\6L}
+\def\F{\6F}
+\def\H{\6H}
+\def\S{\6S}
+\def\D{\6D}
+\def\La{\Lambda}
+
+%\def\sim<{\underset\sim<}
+
+\def\sumK{\underset{|K|=k-1}{{\sum}'}}
+
+\def\sumJ{\underset{|J|=k}{{\sum}'}}
+
+\def\sumij{\underset {ij=1,\dots,N}{{\sum}}}
+
+\def\Fimu{\mathcal F^{i,\mu}}
+
+\def\CM{\C M}
+\def\ctm{\mathbb{C}T(M)}
+\def\sumijq{\underset {ij\leq q}\sum}
+
+\def\sumjq{\underset {j\leq q}\sum}
+
+\def\sumiorj{\underset {i\T{ or }j\geq q+1} \sum}
+
+\def\sumj{ \underset {j=1}{\overset{n}{\sum}}}
+
+\def\sumi{\underset {i=1,\dots,N}\sum}
+
+
+%00000000000000000000000000000000000000000000000000000000
+
+
+%\numberwithin{equation}{chapter}
+
+\def\T{\text}
+\newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega}
+
+\newcommand{\bom}{\bar{\omega}}
+
+\newcommand{\Dom}{\text{Dom} }
+
+\newcommand{\we}{\wedge}
+
+\newcommand{\no}[1]{\|{#1}\|}
+
+\def\R{{\Bbb R}}
+
+\def\I{{\Bbb I}}
+
+\def\C{{\Bbb C}}
+\def\P{{\6P}}
+\def\B{{\6B}}
+\def\Z{{\Bbb Z}}
+
+\def\la{\langle}
+\def\ra{\rangle}
+\def\di{\partial}
+\def\dib{\bar\partial}
+%\def\Label#1{\label{#1}{\bf(#1)}~}
+\def\Label#1{\label{#1}}
+%====================================================
+
+%\numberwithin{equation}{chapter}
+
+\def\simto{\overset\sim\to}
+
+\def\simleq{\underset\sim<}
+
+\def\simgeq{\underset\sim>}
+
+\def\simle{\underset\sim<}
+
+\def\simge{\underset\sim>}
+
+\def\T{\text}
+
+\def\1#1{\overline{#1}}
+
+\def\2#1{\widetilde{#1}}
+
+\def\3#1{\widehat{#1}}
+
+\def\4#1{\mathbb{#1}}
+
+\def\5#1{\frak{#1}}
+
+\def\6#1{{\mathcal{#1}}}
+
+\def\C{{\4C}}
+
+\def\R{{\4R}}
+
+\def\N{{\6N}}
+
+\def\Z{{\4Z}}
+
+\def\A{\6A}
+
+\def\D{\6D}
+\def\L{\6L}
+\def\J{\6J}
+
+\def\B{{\6B}}
+
+\def\M{\6M}
+
+\def\m{\5m}
+
+\def\La{\Lambda}
+
+%\def\sim<{\underset\sim<}
+
+\def\sumK{\underset{|K|=k-1}{{\sum}'}}
+\def\cmt{\mathbb{C}T(M)}
+
+\def\sumJ{\underset{|J|=k}{{\sum}'}}
+
+\def\sumij{\underset {ij=1,\dots,N}{{\sum}}}
+
+\def\Fimu{\mathcal F^{i,\mu}}
+\def\ctm{\mathbb{C}T(M)}
+\def\CM{\C M}
+
+\def\sumijq{\underset {ij\leq q}\sum}
+
+\def\sumjq{\underset{j=1}{\overset{q_0}\sum}}
+
+\def\sumiorj{\underset {i\T{ or }j\geq q+1} \sum}
+
+\def\sumj{\underset {j=1,\dots,N}{{\sum}}}
+
+\def\sumi{\underset {i=1,\dots,N}\sum}
+
+
+
+
+                    % Enter the date or \today between curly braces
+\usetheme{Frankfurt}
+%\useinnertheme{default}
+\useoutertheme{smoothbars}
+\title[Seminar Giải Tích]{  \\{\bf\huge Seminar Giải Tích}\\(Giải tích và Hình học)}   % Enter your title between curly bracesth
+\author{\bf PHẠM TRƯƠNG HOÀNG NHÂN}                 % Enter your name between curly braces
+\institute{\large \textcolor{red}{SEMINAR GIẢI TÍCH} } % Enter your institute name between curly braces
+\date{ Năm học 2017-2018, Thành phố Hồ Chí Minh}
+
+                    % Enter the date or \today between curly braces
+\usetheme{Frankfurt}
+%\useinnertheme{default}
+\useoutertheme{smoothbars}\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Không gian loại thuần nhất}
+
+\begin{frame}\frametitle{Giả metric và độ đo nhân đôi}
+\begin{block}{Định nghĩa}
+Một giả metric trên một tập $X$ là một hàm $\rho:X\times X\to \mathbb{R}$ thỏa các tính chất 
+\begin{itemize}
+\item[(1)] Với mọi $x,y\in X$, $\rho\left(x,y\right)\geqslant0$, và $\rho\left(x,y\right)=0$ nếu và chỉ nếu $x=y$.
+\item[(2)] Với mọi $x,y\in X$, $\rho\left(x,y\right)=\rho\left(y,x\right)$.
+\item[(3)] Có một hằng số $A_{1}\geqslant1$ để với mọi $x,y,z\in X$ chúng ta có 
+\[\rho\left(x,y\right)\leqslant A_{1}\left[\rho\left(x,z\right)+\rho\left(z,y\right)\right].\]
+\end{itemize}
+Trong đó, $A_{1}$ được gọi là hằng số bất đẳng thức tam giác cho giả metric $\rho$. Nếu nó có thể nhận $A_{1}=1$, thì $\rho$ được gọi là một metric.
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giả metric và độ đo nhân đôi}
+\begin{block}{Định nghĩa}
+Cho $\rho_{1}$ và $\rho_{2}$ là giả metric trên một tập $X$.
+\begin{itemize}
+\item[(1)] $\rho_{1}$ được gọi là tương đương toàn cục với $\rho_{2}$ nếu có một hằng số $C>0$ để với mọi $x,y\in X$ chúng ta có 
+\[C^{-1}\rho_{2}\left(x,y\right)\leqslant \rho_{1}\left(x,y\right)\leqslant C\rho_{2}\left(x,y\right).\]
+\item[(2)] $\rho_{1}$ được gọi là tương đương địa phương với $\rho_{2}$ nếu có hằng số $C>0$, $\delta_{0}>0$ để với mọi $x,y\in X$ với $\rho_{1}\left(x,y\right)<\delta_{0}$ chúng ta có
+ \[C^{-1}\rho_{2}\left(x,y\right)\leqslant \rho_{1}\left(x,y\right)\leqslant C\rho_{2}\left(x,y\right).\]
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giả metric và độ đo nhân đôi}
+\begin{block}{Mệnh đề}
+Giả sử $\rho$ là một giả metric trên một không gian $X$ với hằng số bất đẳng thức tam giác $A_{1}$.
+\begin{itemize}
+\item[(i)] Nếu $\left\{x_{0},x_{1},\ldots,x_{m}\right\}$ là những điểm trong $X$, thì 
+\[\rho \left( {{x_0},{x_m}} \right) \le A_1^m\sum\limits_{j = 1}^m {\rho \left( {{x_{j - 1}},{x_j}} \right)} .\]
+\item[(ii)] Lấy $x_{1},x_{2}\in X$ và $\delta_{1}\geqslant\delta_{2}. $ Thì
+\[{B_\rho }\left( {{x_1};{\delta _1}} \right) \cap {B_\rho }\left( {{x_2};{\delta _2}} \right) \ne \emptyset  \Rightarrow {B_\rho }\left( {{x_2};{\delta _2}} \right) \subset {B_\rho }\left( {{x_1};3A_1^2{\delta _1}} \right).\]
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giả metric và độ đo nhân đôi}
+\begin{block}{Mệnh đề}
+\begin{itemize}
+\item[(iii)] Giả sử $y\in B_{\rho}\left(y_{0},\delta_{0}\right)$ và $x\notin B_{\rho}\left(y_{0};\eta\delta_{0}\right).$ Thì nếu $\eta>A_{1}\geqslant1,$
+\[\frac{1}{{2{A_1}}}\rho \left( {x,y} \right) \le \rho \left( {x,{y_0}} \right) \le \left( {\frac{{\eta {A_1}}}{{\eta  - {A_1}}}} \right)\rho \left( {x,y} \right).\]
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giả metric và độ đo nhân đôi}
+\begin{block}{Định nghĩa}
+Cho $X$ là một không gian Topo compact địa phương được trang bị với một giả metric $\rho$ và một độ đo Borel chính quy dương $\mu$. Thì $\left(X,\rho,\mu\right)$ là một không gian loại thuần nhất nếu các điều sau thỏa mãn
+\begin{itemize}
+\item[(1)] Với mỗi $x\in X$, tập hợp những quả cầu $\left\{B_{\rho}\left(x;\delta\right):\delta>0\right\}$ là mở và do đó chúng là $\mu$ đo được, và chúng tạo thành một cơ sở cho lân cận mở của $x$.
+\item[(2)] $\forall x\in X$ và $\delta>0$, $0\le \mu\left(B_{\rho}\left(x;\delta\right)\right)<\infty.$
+\item[(3)] Có một hằng số $A_{2}>0$ để $\forall x\in X$ và $\delta>0$
+\[\mu\left(B_{\rho}\left(x;2\delta\right)\right)\le A_{2}\mu\left(B_{\rho}\left(x;\delta\right)\right).\] 
+\end{itemize}
+Hằng số $A_{2}$ được gọi là hằng số nhân đôi cho độ đo $\mu$.
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giả metric và độ đo nhân đôi}
+\begin{block}{Mệnh đề}
+Nếu $\left(X,\rho,\mu\right)$ là một không gian loại thuần nhất với hằng số nhân đôi $A_{2}$, có một hằng số $\tau$ để với $\lambda\ge 2$
+\[\mu\left(B_{\rho}\left(x;\lambda\delta\right)\right)\le \lambda^{\tau}\mu\left(B_{\rho}\left(x;\delta\right)\right).\]
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Bổ đề phủ}
+\begin{block}{Bổ đề}
+Cho $0<\eta<1$, lấy $x_{1},\ldots,x_{m}\in B_{\rho}\left(x_{0};\delta\right)$ và giả sử rằng $\rho\left(x_{j},x_{k}\right)\ge\eta\delta$ $\forall 1\le j\neq k\le m$. Khi đó $m$ bị chặn bởi một hằng số mà chỉ phụ thuộc vào $A_{1}$, $A_{2}$ và $\eta$.
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Bổ đề phủ}
+\begin{block}{Bổ đề}
+Cho $E\subset X$ là một tập và lấy $\mathcal{A}$ là một tập chỉ số. Giả sử với mỗi $\alpha\in \mathcal{A}$, tồn tại $x_{\alpha}\in X$ và $\delta_{\alpha}>0$ để $E \subset \bigcup\limits_{\alpha  \in {\cal A}} {{B_\rho }\left( {{x_\alpha };{\delta _\alpha }} \right)}$. Cũng giả sử rằng một trong những điều kiện sau đây thỏa mãn
+\begin{itemize}
+\item[(a)] Tập $E$ bị chặn, với mỗi $\alpha\in\mathcal{A}$, điểm $x_{\alpha}\in E$.
+\item[(b)] Không có hạn chế trên tập $E$ hay điểm $x_{\alpha}$, nhưng $\mathop {\sup {\delta _\alpha }}\limits_{\alpha  \in {\cal A}}  = M < \infty$.\\
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Bổ đề phủ}
+\begin{block}{Bổ đề}
+Khi đó tồn tại một họ con hữu hạn hay đếm được của những quả cầu,
+\[\left\{ {{B_1} = {B_\rho }\left( {{x_1};{\delta _1}} \right), \ldots ,{B_k} = {B_\rho }\left( {{x_k};{\delta _k}} \right)} \right\},\]
+để 
+\begin{itemize}
+\item[(1)] Những quả cầu thì rời nhau: $B_{j}\cap B_{k}=\emptyset$ nếu $i\neq k;$
+\item[(2)] Nếu $B_j^* = {B_\rho }\left( {{x_j};3A_1^2{\delta _j}} \right)$, thì $E \subset \bigcup\limits_j {B_j^*} ;$
+\item[(3)] $\mu \left( E \right) \le C\sum\limits_j {\mu \left( {{B_j}} \right)} .$
+\end{itemize}
+Hằng số $C$ chỉ phụ thuộc vào $A_{1}$ và $A_{2}$.
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Bổ đề phủ}
+\begin{block}{Định nghĩa}
+Xét $U\subset \mathbb{R}^n$ là một tập mở thực sự. Cho bất kỳ $x\in U$ 
+\begin{align*}
+d\left( x \right) = {d_U}\left( x \right) = \mathop {\inf }\limits_{y \notin U} \rho \left( {x,y} \right) = \sup \left\{ {\delta  > 0|{B_\rho }\left( {x;\delta } \right) \subset U} \right\},
+\end{align*}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Bổ đề phủ}
+\begin{block}{Bổ đề Whitney}
+Cho $U\varsubsetneq X$ là một tập mở. Khi đó có một họ những quả cầu $\left\{B_{j}=B_{\rho}\left(x_{j};\delta_{j}\right)\right\}$ với $\delta_{j}=\frac{1}{2}d\left(x_{j}\right)$ để nếu $B_{j}^{*}=B_{\rho}\left(x_{j};4\delta_{j}\right)$ và $B_{j}^{\#} =B_{\rho}\left(x_{j};\left(12A_{1}^{4}\right)^{-1}\delta_{j}\right)$, thì 
+\begin{itemize}
+\item[(1)] Với mỗi $j$ , $B_{j}\subset U$, và $B_{j}^{*}\cap\left(X\backslash U\right)\neq \emptyset$.
+\item[(2)] Những quả cầu $\left\{B_{j}^{\#}\right\}$ rời nhau.
+\item[(3)] $B = \bigcup\limits_j {{B_j}}$.
+\item[(4)] $\sum\limits_j {\mu \left( {{B_j}} \right)}  \le C\mu \left( U \right)$.
+\item[(5)] Mỗi điểm của $U$ thuộc hầu hết $M<\infty$ của những quả cầu $\left\{B_{j}\right\}$, với $M$ chỉ phụ thuộc hằng số $A_{1}$ và $A_{2}$. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Toán tử tối đại Hardy-Littlewood}
+\begin{block}{Định nghĩa}
+Lấy $\left(X,\rho,\mu\right)$ là một không gian loại thuần nhất. Lấy $f$ là khả tích trên $X$. Với $x\in X$ đặt 
+\begin{align*}
+{\cal M}\left[ f \right]\left( x \right) = \mathop {\sup }\limits_{\delta  > 0} \mathop {\sup }\limits_{{B_\rho }\left( {y;\delta } \right)} \frac{1}{{\mu \left( {{B_\rho }\left( {y;\delta } \right)} \right)}}\int_{{B_\rho }\left( {y;\delta } \right)} {\left| {f\left( t \right)} \right|d\mu \left( t \right)}, 
+\end{align*}
+sao cho $x\in {{B_\rho }\left( {y;\delta } \right)}$.
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Toán tử tối đại Hardy-Littlewood}
+\begin{block}{Định lý Hardy and Littlewood\label{1.12}}
+Có một hằng số $C$ chỉ phụ thuộc vào $A_{1}$ và $A_{2}$ để với $1\le p<\infty$, theo những phát biểu cụ thể như sau
+\begin{itemize}
+\item[(1)] Nếu $f\in L^{1}\left(X,d\mu\right)$, thì
+\begin{align*}
+\mu\left(\left\{x\in X|\mathcal{M}\left[f\right]\left(x\right)>\lambda\right\}\right)\le C\lambda^{-1}\left\|f\right\|_{L^{1}}.
+\end{align*}
+\item[(2)] Nếu $1<p<\infty$ và nếu $f\in L^{p}\left(X,d\mu\right)$, khi đó 
+\begin{align*}
+\left\|\mathcal{M}\left[f\right]\right\|_{L^{p}}\le 2Cp\left(p-1\right)^{-1}\left\|f\right\|_{L^{p}}.
+\end{align*}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Phân rã Caldéron-Zygmund}
+\begin{block}{Định lý Caldéron-Zygmund}
+Xét $f\in L^{1}\left(X,d\mu\right)$, và lấy $\alpha>0$ thỏa mãn $\alpha\mu\left(X\right)>C\left\|f\right\|_{L^1}$ với $C$ là hằng số từ \textbf{Định lý \eqref{1.12}} Hardy-Littlewood Tối đại. Khi đó tồn tại một dãy những quả cầu $\left\{ {{B_j} = {B_\rho }\left( {{x_j};{\delta _j}} \right)} \right\}$ và một phân rã 
+\[f = g + \sum\limits_j {{b_j}}, \]
+với những tính chất sau
+\begin{itemize}
+\item[(1)] Hàm $g$ và $\left\{b_{j}\right\}$ đều thuộc vào $L^{1}\left(X\right)$.
+\item[(2)] $\left| {f\left( x \right)} \right| \le A_2^2\alpha$ với hầu hết tất cả $x\in X$.
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Phân rã Caldéron-Zygmund}
+\begin{block}{Định lý Caldéron-Zygmund}
+\begin{itemize}
+\item[(3)] Hàm $b_j$ có giá trong $B_j$. Hơn nữa 
+\[\int_X {\left| {{b_j}\left( x \right)} \right|d\mu \left( x \right)}  \le 2A_2^2\alpha \mu \left( {{B_j}} \right),\] và
+\[\int_X {{b_j}\left( x \right)d\mu \left( x \right)}  = 0.\]
+\item[(4)] \[\sum\limits_j {\mu \left( {{B_j}} \right)}  \le C{\alpha ^{ - 1}}{\left\| f \right\|_{{L^1}}},\]
+với $C$ chỉ phụ thuộc vào $A_{1}$ và $A_{2}$.
+\end{itemize}
+\end{block}
+\end{frame}
+\section{Toán tử Laplace và Giải tích Euclide}
+
+\begin{frame}\frametitle{Những tính chất đối xứng của toán tử Laplace}
+\begin{block}{Mệnh đề}
+\begin{itemize}
+\item[(a)] Toán tử $\Delta$ thì bất biến dưới phép tịnh tiến. Do đó với $y\in \mathbb{R}^{n}$ và $\varphi\in C_{0}^{\infty}\left(\mathbb{R}^{n}\right)$ chúng ta định nghĩa $T_{y}\left[\varphi\right]\left(x\right)=\varphi\left(x-y\right)$. Khi đó 
+\begin{align*}
+\Delta \left[ {{T_y}\left[ \varphi  \right]} \right] = {T_y}\left[ {\Delta \left[ \varphi  \right]} \right].
+\end{align*}
+\item[(b)] Toán tử $\Delta$ thì bất biến dưới phép quay. Lấy $O:\mathbb{R}^{n}\to\mathbb{R}^{n}$ là một phép biến đổi trực giao tuyến tính, và đặt $R_{O}\left[\varphi\right]\left(x\right)=\varphi\left(Ox\right)$. Khi đó 
+\begin{align*}
+\Delta \left[ {{R_O}\left[ \varphi  \right]} \right] = {R_O}\left[ {\Delta \left[ \varphi  \right]} \right].
+\end{align*}
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Những tính chất đối xứng của toán tử Laplace}
+\begin{block}{Mệnh đề}
+\begin{itemize}
+\item[(c)] Định nghĩa phép vị tự Euclide bằng cách đặt ${D_\lambda }\left[ \varphi  \right]\left( x \right) = \varphi \left( {{\lambda ^{ - 1}}x} \right).$ Khi đó
+\begin{align*}
+\Delta \left[ {{D_\lambda }\left[ \varphi  \right]} \right] = {\lambda ^{ - 2}}{D_\lambda }\left[ {\Delta \left[ \varphi  \right]} \right].
+\end{align*}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Thế vị Newton}
+\begin{block}{Định nghĩa}
+Thế vị Newton $N$ là hàm được cho bởi 
+\begin{align*}
+N\left( x \right) = \left\{ \begin{array}{l}
+\omega _2^{ - 1}\log \left( {\left| x \right|} \right),n = 2,\\
+\omega _n^{ - 1}{\left( {2 - n} \right)^{ - 1}}{\left| x \right|^{2 - n}},n > 2.
+\end{array} \right.
+\end{align*}
+Ở đây
+\[{\omega _n} = 2{\pi ^{\frac{n}{2}}}\Gamma {\left( {\frac{n}{2}} \right)^{ - 1}}\]
+là độ đo mặt của mặt cầu đơn vị trong $\mathbb{R}^n$.
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Thế vị Newton}
+\begin{block}{Bổ đề}
+Tích chập với $N$ là nghiệm cơ bản của $\Delta$. Một cách chính xác, nếu $\varphi\in \mathcal{C}_0^{\infty}\left(\mathbb{R}^{n}\right)$, định nghĩa 
+\begin{align*}
+{\cal N}\left[ \varphi  \right]\left( x \right) = \int_{{\mathbb{R}^n}} {N\left( {x - y} \right)\varphi \left( y \right)dy}  = \int_{{\mathbb{R}^n}} {N\left( y \right)\varphi \left( {x - y} \right)dy} .
+\end{align*}
+Khi đó ${\cal N}\left[ \varphi  \right] \in {C^\infty }\left( {{\mathbb{R}^n}} \right)$, và 
+\begin{align*}
+\begin{array}{l}
+\varphi \left( x \right) = {\cal N}\left[ {\Delta \left[ \varphi  \right]} \right]\left( x \right),\\
+\varphi \left( x \right) = \Delta \left[ {{\cal N}\left[ \varphi  \right]} \right]\left( x \right).
+\end{array}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Vai trò của hình học Euclide}
+\begin{block}{Bổ đề}
+Giả sử $n\ge 3$. Khi đó với mọi đa chỉ số $\alpha$ và $\beta$ với $\left|\alpha\right|+\left|\beta\right|\ge 0$ có một hằng số $C_{\alpha,\beta}>0$ để với mọi $x,y\in\mathbb{R}^n$
+\begin{align*}
+\left| {\partial _x^\alpha \partial _y^\beta N\left( {x,y} \right)} \right| \le {C_{\alpha ,\beta }}\frac{{{d_E}{{\left( {x,y} \right)}^{2 - \left| \alpha  \right| - \left| \beta  \right|}}}}{{\left| {{\mathbb{B}_E}\left( {x,{d_E}\left( {x,y} \right)} \right)} \right|}} = {C'_{\alpha ,\beta }}{\left| {x - y} \right|^{ - n + 2 - \left| \alpha  \right| - \left| \beta  \right|}}.
+\end{align*}
+Bất đẳng thức vẫn giữ nguyên khi $n=2$ miễn là ${\left| \alpha  \right| - \left| \beta  \right|}>0$.
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Ước lượng Hardy-Littlewood-Sobolev}
+Định nghĩa một toán tử $\mathcal{K}$ bằng việc đặt
+\begin{align*}
+{\cal K}\left[ f \right]\left( x \right) = \int_{{\mathbb{R}^n}} {K\left( {x,y} \right)f\left( y \right)dy},
+\end{align*}
+khi tích phân hội tụ.
+\begin{block}{Định lý Hardy-Littlewood-Sobolev}
+Lấy $1\le p<\frac{n}{m}$. Nếu $f\in L^{p}\left(\mathbb{R}^n\right)$ thì tích phân $\mathcal{K}$ xác định như trên hội tụ với hầu hết mọi $x\in\mathbb{R}^n$. Hơn nữa, nếu $p>1$ và nếu 
+\begin{align*}
+\frac{1}{q} = \frac{1}{p} - \frac{m}{n} > 0,
+\end{align*}
+có một hằng số $C_{p,m}$ để với mỗi $f\in L^{p}\left(\mathbb{R}^{n}\right)$ chúng ta có
+\begin{align*}
+{\left\| {{\cal K}\left[ f \right]} \right\|_{{L^q}\left( {{\mathbb{R}^n}} \right)}} \le {C_{p,m}}{\left\| f \right\|_{{L^p}\left( {{\mathbb{R}^n}} \right)}}.
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Ước lượng Lipschitz}
+\begin{block}{Định lý}
+Xét $0<\alpha<1$, và xét $f\in\Lambda_\alpha$ có giá compact. Khi đó $\mathcal{N}\left[f\right]$ thì khả vi liên tục hai lần, và có một hằng số $C$ không phụ thuộc vào $f$ và giá của nó để 
+\begin{align*}
+{\sum\limits_{j,k = 1}^n {\left\| {\frac{{{\partial ^2}\left[ {{\cal N}\left[ f \right]} \right]}}{{\partial {x_j}\partial {x_k}}}} \right\|} _{{\Lambda _\alpha }}} \le C{\left\| f \right\|_{{\Lambda _\alpha }}}.
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Ước lượng $L^2$}
+\begin{block}{Bổ đề}
+Xét $\left\{K_j\right\}$ là những hàm thỏa những điều kiện từ điều kiện \textbf{(1)} đến điều kiện \textbf{(4)}, và với mỗi $j\in\mathbb{Z}$ đinh nghĩa một toán tử $T_j$ bằng cách đặt
+\begin{align*}
+{T_j}\left[ f \right]\left( x \right) = {K_j}*f\left( x \right) = \int_{{\mathbb{R}^n}} {{K_j}\left( {x - y} \right)f\left( y \right)dy} .
+\end{align*} 
+Có một hằng số $C$ để với bất kỳ số nguyên $N$ nào chúng ta có 
+\begin{align*}
+{\left\| {\sum\limits_{j =  - N}^N {{T_j}\left[ f \right]} } \right\|_{{L^2}\left( {{\mathbb{R}^n}} \right)}} \le C{\left\| f \right\|_{{L^2}\left( {{\mathbb{R}^n}} \right)}}.
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Ước lượng $L^1$}
+\begin{block}{Định lý}
+Có một hằng số $A$ không phụ thuộc vào $N$ để nếu $f\in L^{1}\left(\mathbb{R}^n\right)$, thì
+\begin{align*}
+\left| {\left\{ {x \in {\mathbb{R}^n}|\left| {{{\cal K}^{\left[ N \right]}}\left[ f \right]\left( x \right) > \alpha } \right|} \right\}} \right| \le \frac{A}{\lambda }{\left\| f \right\|_{{L^1}\left( {{\mathbb{R}^n}} \right)}}.
+\end{align*}
+\end{block}
+\end{frame}
+\section{Toán tử nhiệt và một metric dị hướng trên $\mathbb{R}^{n+1}$}
+\begin{frame}\frametitle{Giới thiệu toán tử nhiệt}
+\begin{block}{Giới thiệu toán tử nhiệt}
+Chúng ta giới thiệu những tọa độ $\left(t,x\right)=\left(t,x_{1},\ldots,x_{n}\right)$ trên $\mathbb{R}\times\mathbb{R}^{n}=\mathbb{R}^{n+1}$. Khi đó toán tử nhiệt là 
+\begin{align*}
+\left( {{\partial _t} - {\Delta _x}} \right)\left[ u \right] = \frac{{\partial u}}{{\partial t}} - \frac{{{\partial ^2}u}}{{\partial x_1^2}} -  \cdots  - \frac{{{\partial ^2}u}}{{\partial x_n^2}}.
+\end{align*}
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giới thiệu khoảng cách nhiệt}
+\begin{block}{Giới thiệu khoảng cách nhiệt}
+Chúng cũng có thể giới thiệu một giả metric $d_H$ trên $\mathbb{R}^{n+1}$ thì tương thích với họ những phép vị tự này. (Ở đây ký hiệu $d_H$ thay cho một khoảng cách "nhiệt"). Đặt 
+\begin{align*}
+{d_H}\left( {\left( {t,x} \right),\left( {s,y} \right)} \right) = {\left[ {{{\left( {t - s} \right)}^2} + {{\left| {x - y} \right|}^4}} \right]^{\frac{1}{4}}}.
+\end{align*} 
+\end{block}
+\end{frame}
+\begin{frame}\frametitle{Giới thiệu quả cầu nhiệt}
+\begin{block}{Giới thiệu quả cầu nhiệt}
+Chúng ta hãy đặt
+\begin{align*}
+{\mathbb{B}_H}\left( {\left( {x,t} \right),\delta } \right) = \left\{ {\left( {s,y} \right) \in {\mathbb{R}^{n + 1}}|{d_H}\left( {\left( {t,x} \right),\left( {s,y} \right)} \right) < \delta } \right\}.
+\end{align*}
+Khi đó thể tích của một quả cầu bán kính $\delta$ như thế là một hằng số thời gian $\delta^{n+2}$. 
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Bài toán giá trị ban đầu và một nghiệm cơ bản}
+Chúng ta bắt đầu bằng việc xét bài toán giá trị ban đầu với toán tử nhiệt. Cho $f\in L^{2}\left(\mathbb{R}^{n}\right)$, chúng ta muốn tìm một hàm $F\in C^{\infty}\left(\mathbb{R}\times\mathbb{R}^{n}\right)$ sao cho
+\begin{itemize}
+\item[(1)] $\frac{{\partial F}}{{\partial t}}\left( {t,x} \right) - \sum\limits_{j = 1}^n {\frac{{{\partial ^2}F}}{{\partial x_j^2}}} \left( {t,x} \right) = 0$ với $t>0$ và $x\in\mathbb{R}^n$.
+\item[(2)] Nếu chúng ta đặt $F_{t}\left(x\right)=F\left(t,x\right)$, thì $\mathop {\lim }\limits_{t \to 0} {F_t} = f$ hội tụ trong $L^{2}\left(\mathbb{R}^{n}\right)$.
+\end{itemize}
+\end{frame}
+\begin{frame}\frametitle{Bài toán giá trị ban đầu và một nghiệm cơ bản}
+Để thúc đẩy nghiệm, chúng ta thảo luận một cách thân mật như sau. Giả sử $F$ là một nghiệm. Xét 
+\begin{align*}
+{{\cal F}_x}\left[ F \right]\left( {t,\xi } \right) = \widehat F\left( {t,\xi } \right) = \int_{{\mathbb{R}^n}} {{e^{ - 2\pi i\xi  \cdot x}}F\left( {t,x} \right)dx} ,
+\end{align*} 
+là biến đổi Fourier từng phần của $F$ theo biến $x$. Khi đó nếu lấy tích phân từng phần và không có loại tích phân trên biên, phương trình đạo hàm riêng \textbf{(1)} sẽ trở thành phương trình vi phân thông thường
+\[\frac{{d\widehat F}}{{dt}}\left( {t,\xi } \right) =  - 4{\pi ^2}{\left| \xi  \right|^2}\widehat F\left( {t,\xi } \right).\]
+Điều này khiến ta nghĩ rằng $\widehat F\left( {t,\xi } \right) = C\left( \xi  \right)\exp \left( { - 4{\pi ^2}{{\left| \xi  \right|}^2}t} \right)$, và nếu $F$ thỏa mãn điều kiện đầu được cho trong \textbf{(2)}, thì chúng ta sẽ lấy $C\left(\xi\right)=\widehat{f}\left(\xi\right)$, hay 
+\begin{align*}
+\widehat F\left( {t,\xi } \right) = \widehat f\left( \xi  \right){e^{ - 4{\pi ^2}{{\left| \xi  \right|}^2}t}}.
+\end{align*}
+\end{frame}
+\begin{frame}\frametitle{Bài toán giá trị ban đầu và một nghiệm cơ bản}
+Lấy biến đổi Fourier ngược, chúng ta sẽ có được
+\[F\left( {t,x} \right) = \int_{{\mathbb{R}^n}} {{H_t}\left( {x - y} \right)f\left( y \right)dy} ,\]
+với 
+\[{H_t}\left( x \right) = \int_{{\mathbb{R}^n}} {{e^{2\pi ix \cdot \xi }}{e^{ - 4\pi {{\left| \xi  \right|}^2}t}}d\xi }  = {\left( {4\pi t} \right)^{\frac{{ - n}}{2}}}{e^{ - \frac{{{{\left| x \right|}^2}}}{{4t}}}},\]
+biến đổi Fourier ngược từng phần của ${e^{ - 4{\pi ^2}{{\left| \xi  \right|}^2}t}}$. Công cụ không chính thức này được khẳng định bởi kết quả theo sau. Định nghĩa 
+\begin{align}\label{59}
+{H_0}\left( {t,x} \right) = {H_t}\left( x \right) = \left\{ {\begin{array}{*{20}{c}}
+{{{\left( {4\pi t} \right)}^{ - \frac{n}{2}}}{e^{ - \frac{{{{\left| x \right|}^2}}}{{4t}}}}}&{t > 0,}\\
+0&{t \le 0.}
+\end{array}} \right.
+\end{align}
+\end{frame}
+\begin{frame}\frametitle{Bài toán giá trị ban đầu và một nghiệm cơ bản}
+\begin{block}{Định lý\label{3.1}}
+Xét $1\le p<\infty$, và xét $f\in L^{p}\left(\mathbb{R}^{n}\right)$. Đặt 
+\[F\left( {t,x} \right) = {H_t}*f\left( x \right) = \int_{{\mathbb{R}^n}} {{{\left( {4\pi t} \right)}^{ - \frac{n}{2}}}{e^{ - \frac{{{{\left| {y} \right|}^2}}}{{4t}}}}f\left( y \right)dy} .\]
+Khi đó $F\in\mathcal{C}^{\infty}\left( {\left( {0,\infty } \right) \times {\mathbb{R }^n}} \right)$ và 
+\begin{itemize}
+\item[(1)] $\frac{{\partial F}}{{\partial t}}\left( {t,x} \right) - \sum\limits_{j = 1}^n {\frac{{{\partial ^2}F}}{{\partial x_j^2}}} \left( {t,x} \right) = 0$ với $t>0$ và $x\in\mathbb{R}^n$.
+\item[(2)] $\mathop {\lim }\limits_{t \to 0} {\left\| {{H_t}*f - f} \right\|_{{L^p}\left( {{\mathbb{R}^n}} \right)}} = 0$.
+\item[(3)] Nếu $\varphi\in\mathcal{C}_{0}^{\infty}\left(\mathbb{R}^{n}\right)$ thì $\mathop {\lim }\limits_{t \to 0} {\left\| {{H_t}*\varphi  - \varphi } \right\|_{{L^\infty }\left( {{^n}} \right)}} = 0$.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Bài toán giá trị ban đầu và một nghiệm cơ bản}
+\begin{block}{Bổ đề}
+Phép nhân chập với $H$ là một nghiệm cơ bản cho toán tử nhiệt trên $\mathbb{R}\times\mathbb{R}^n$. Một cách chính xác, nếu $\varphi\in\mathcal{C}_0^\infty\left(\mathbb{R}^{n+1}\right)$, định nghĩa 
+\[{\cal H}\left[ \varphi  \right]\left( {t,x} \right) = \iint_{\mathbb{R}^{n+1}}{{H\left( {t - s,x - y} \right)\varphi \left( {s,y} \right)dsdy}}.\]
+Thì $\mathcal{H}\left[\varphi\right]\in{C}^{\infty}\left(\mathbb{R}^{n+1}\right)$ và 
+\[\begin{array}{l}
+\varphi \left( {t,x} \right) = {\cal H}\left[ {\left( {{\partial _t} - {\Delta _x}} \right)\left[ \varphi  \right]} \right]\left( {t,x} \right),\\
+\varphi \left( {t,x} \right) = \left( {{\partial _t} - {\Delta _x}} \right)\left[ {{\cal H}\left[ \varphi  \right]} \right]\left( {t,x} \right).
+\end{array}\]
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Hội tụ Parabolic}
+Nếu chúng ta thay thế toán tử nhiệt bằng toán tử Laplace $ - \frac{{{\partial ^2}}}{{\partial {t^2}}} - {\Delta _x}$, chúng ta có thể đặt một bài toán giá trị ban đầu đồng dạng đã thảo luận trong mục trước. Bây giờ bài toán thực ra là tìm hàm điều hòa $u\left(t,x\right)$ trên $\left(0,\infty\right)\times\mathbb{R}^{n}$ sao cho $\mathop {\lim }\limits_{t \to 0} u\left( {t, \cdot } \right)$ là một hàm được mô tả bởi $f\in L^{p}\left(\mathbb{R}^n\right)$. Bài toán này được gọi là bài toán Dirichlet, và nếu nó bắt chước chứng minh của \textbf{Định lý \eqref{3.1}}, điều đó có thể kiểm tra rằng nghiệm thì được cho bởi tích phân Poisson
+\[u\left( {t,x} \right) = \Gamma \left( {\frac{{n + 1}}{2}} \right){\pi ^{ - \frac{{n + 1}}{2}}}\int_{{\mathbb{R}^n}} {\frac{t}{{{{\left| {x - y} \right|}^2} + {t^2}}}f\left( y \right)dy} .\]
+\end{frame}
+
+\begin{frame}\frametitle{Hội tụ Parabolic}
+Ngoài hội tụ theo chuẩn, nó cũng là một kết quả cổ điển mà $u\left(t,y\right)$ hội tụ từng điểm về $f\left(x\right)$ với hầu hết các $x\in\mathbb{R}^n$ khi $\left(y,t\right)$ nằm trong một miền gần không tiếp xúc với đỉnh tại $x$. Do đó với mỗi $\alpha>0$ xét miền conic
+\[{C_\alpha }\left( x \right) = \left\{ {\left( {t,y} \right) \in \left( {0,\infty } \right) \times {\mathbb{R}^n}|\left| {x - y} \right| < \alpha t} \right\}.\]
+Kết quả là nếu $f\in L^{p}\left(\mathbb{R}^{n}\right)$, thì ngoại trừ $x$ thuộc về một tập độ đo không, chúng ta có 
+\[\mathop {\lim }\limits_{\scriptstyle\left( {t,y} \right) \to \left( {0,x} \right)\hfill\atop
+\scriptstyle\left( {t,y} \right) \in {C_\alpha }\left( x \right)\hfill} u\left( {t,y} \right) = f\left( x \right).\]
+\end{frame}
+\begin{frame}\frametitle{Hội tụ Parabolic}
+Điều này được hiểu\footnote{Xem ví dụ, \textbf{\cite{Ste70}}, trang 197.} rằng những kết quả này phụ thuộc vào việc ước lượng hàm tối đại tiếp tuyến không trong những loại của hàm tối đại Hardy-Littlewood
+\[\mathop {\sup }\limits_{\left( {t,y} \right) \in {C_\alpha }\left( x \right)} \left| {u\left( {t,y} \right)} \right| \le {A_\alpha }{\cal M}\left[ f \right]\left( x \right).\]
+
+Chúng ta có thể thấy rõ sự khác biệt giữa việc khảo sát không gian Euclide thông thường và không gian hình học dị hướng được liên kết toán tử nhiệt khi chúng ta học về hội tụ từng điểm khi $t\to0$ của nghiệm ${H_t}*f$. Với mỗi $x\in\mathbb{R}^{n}$ và mỗi $\alpha>0$, xét một miền parabolic gần đúng
+\[{\Gamma _\alpha }\left( x \right) = \left\{ {\left( {t,y} \right) \in \left( {0,\infty } \right) \times {\mathbb{R}^n}|\left| {y - x} \right| < \alpha \sqrt t } \right\}.\]
+
+\end{frame}
+\begin{frame}\frametitle{Hội tụ Parabolic}
+Phát biểu tương tự về hội tụ điểm của tích phân Poisson thì khi đó \\
+\textit{Xét $1\le p\le\infty$ và xét $f\in L^{p}\left(\mathbb{R}^{n}\right)$. Khi đó có một tập $E\subset\mathbb{R}^n$ với độ đo Lebesgue bằng không để với mọi $x\notin E$ và tất cả $\alpha>0$
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{\left( {t,y} \right) \to \left( {0,x} \right)}\\
+{\left( {t,y} \right) \in {\Gamma _\alpha }\left( x \right)}
+\end{array}} {H_t}*f\left( y \right) = f\left( x \right).\]}
+Kết quả này phụ thuộc vào ước lượng cho hàm parabolic tối đại sau đây.
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Hội tụ Parabolic}
+\begin{block}{Bổ đề\label{3.3}}
+Với mỗi	$\alpha>0$ có một hằng số $C=C\left(n,\alpha\right)>0$ chỉ phụ thuộc vào số chiều $n$ và $\alpha$ để nếu $f\in L^{1}\left(\mathbb{R}^{n}\right)$ và nếu $F\left(t,x\right)=H_{t}*f\left(x\right)$, thì
+\[\mathop {\sup }\limits_{\left( {t,y} \right) \in {\Gamma _\alpha }\left( x \right)} \left| {F\left( {t,y} \right)} \right| \le C\left( {n,\alpha } \right){\cal M}\left[ f \right]\left( x \right).\]
+\end{block}
+\begin{block}{}
+Với \[{\Gamma _\alpha }\left( x \right) = \left\{ {\left( {t,y} \right) \in \left( {0,\infty } \right) \times {\mathbb{R}^n}|\left| {y - x} \right| < \alpha \sqrt t } \right\},\] và
+\[{H_t}\left( x \right) = \int_{{\mathbb{R}^n}} {{e^{2\pi ix \cdot \xi }}{e^{ - 4\pi {{\left| \xi  \right|}^2}t}}d\xi }  = {\left( {4\pi t} \right)^{\frac{{ - n}}{2}}}{e^{ - \frac{{{{\left| x \right|}^2}}}{{4t}}}}.\]
+\end{block}
+\end{frame}
+
+\section{Những toán tử trên nhóm }
+
+\begin{frame}\frametitle{Một nửa trên của không gian Siegal và biên của nó}
+Trong mặt phẳng phức $\mathbb{C}$, mặt phẳng nửa trên $U = \left\{ {z = x + iy|y > 0} \right\}$ là song chỉnh hình tương đương với đĩa mở đơn vị $\mathbb{D}=\left\{\omega\in\mathbb{C}|\left|\omega\right|<1\right\}$ qua ánh xạ 
+\[z \to \omega  = \frac{{z - i}}{{z + i}} \in\mathbb{D} , z \in U.\]
+Trong $\mathbb{C}^{n+1}$, miền tương tự với $U$ là không gian nửa trên Siegel
+\[{{\cal U}_{n + 1}} = \left\{ {\left( {{z_1}, \ldots ,{z_n},{z_{n + 1}}} \right) \in {\mathbb{C}^{n + 1}}|\Im m\left[ {{z_{n + 1}}} \right] > \sum\limits_{j = 1}^n {{{\left| {{z_j}} \right|}^2}} } \right\},\]
+nó là song ánh chỉnh hình với quả cầu đơn vị mở
+\[{\mathbb{B}_{n+ 1}} = \left\{ {\left( {{\omega _1}, \ldots ,{\omega _n},{\omega _{n + 1}}} \right) \in {\mathbb{C}^{n + 1}}|\sum\limits_{j = 1}^{n + 1} {{{\left| {{\omega _j}} \right|}^2} < 1} } \right\},\]
+\end{frame}
+
+\begin{frame}\frametitle{Một nửa trên của không gian Siegal và biên của nó}
+qua ánh xạ $z\to\omega\in\mathcal{B}_{n+1}$ với $z\in\mathcal{U}_{n+1}$ được cho bởi
+\[\omega  = \left( {{\omega _0},{\omega _1}, \ldots ,{\omega _n}} \right) = \left( {\frac{{2{z_1}}}{{{z_{n + 1}} + i}}, \ldots ,\frac{{2{z_n}}}{{{z_{n + 1}} + i}},\frac{{{z_{n + 1}} - i}}{{{z_{n + 1}} + i}}} \right).\]
+Chúng ta có thể nhận ra biên của $\mathcal{U}_{n+1}$ với $\mathbb{C}^{n}\times\mathbb{R}$ qua ánh xạ được cho bởi
+\[\left( {{z_1}, \ldots ,{z_n},t + i\sum\limits_{j = 1}^n {{{\left| {{z_j}} \right|}^2}} } \right) \leftrightarrow \left( {{z_1}, \ldots ,{z_n},,t} \right) \in {\mathbb{C}^n} \times \mathbb{R},\]
+trong đó
+\[\left( {{z_1}, \ldots ,{z_n},t + i\sum\limits_{j = 1}^n {{{\left| {{z_j}} \right|}^2}} } \right) \in \partial {{\cal U}_{n + 1}}.\]
+\end{frame}
+
+
+\begin{frame}\frametitle{Một nửa trên của không gian Siegal và biên của nó}
+Để tìm sự tương tự như nhiều biến, chúng ta tiếp tục như sau. Chúng ta viết những phần tử $z\in\mathbb{C}^{n+1}$ khi $z=\left(z',z_{n+1}\right)$ với $z'\in\mathbb{C}^{n}$ và $z_{n+1}\in\mathbb{C}$. Với mỗi $a=\left(a',a_{n+1}\right)\in\mathbb{C}^{n+1}$ xét ánh xạ affine
+\[{T_a}\left( z \right) = {T_{\left( {a',{a_{n + 1}}} \right)}}\left( {z',{z_{n + 1}}} \right) = \left( {a' + z',{a_{n + 1}} + {z_{n + 1}} + 2i\left\langle {z',a'} \right\rangle } \right),\]
+với $\left\langle {z',a'} \right\rangle  = \sum\limits_{j = 1}^n {{z_j}\overline {{a_j}} } $ là tích trong dạng Hermite trên $\mathbb{C}^n$. Chú ý rằng $T_{0}$ là ánh xạ đồng nhất, và họ những ánh xạ ${\left\{ {{T_z}} \right\}_{z \in {\mathbb{C}^{n + 1}}}}$ thì đóng dưới phép hợp thành và phép lấy ảnh ngược. Thật ra là 
+\begin{eqnarray*}
+\begin{split}
+{T_{\left( {a',{a_{n + 1}}} \right)}}\circ {T_{\left( {b',{b_{n + 1}}} \right)}} &= {T_{\left( {a' + b',{a_{n + 1}} + {b_{n + 1}} + 2i\left\langle {b',a'} \right\rangle } \right),}}\\
+{\left( {{T_{\left( {a',{a_{n + 1}}} \right)}}} \right)^{ - 1}} &= {T_{\left( { - a', - a{  _{n + 1}} - 2i\left\langle {a',a'} \right\rangle } \right).}}
+\end{split}
+\end{eqnarray*}
+\end{frame}
+
+\begin{frame}\frametitle{Một nửa trên của không gian Siegal và biên của nó}
+
+Theo sau đó nếu chúng ta đặt
+\begin{align}\label{62}
+\left( {a',{a_{n + 1}}} \right) \cdot \left( {b',{b_{n + 1}}} \right) = \left( {a' + b',{a_{n + 1}} + {b_{n + 1}} + 2i\left\langle {b',a'} \right\rangle } \right),
+\end{align}
+khi đó $\mathbb{C}^{n+1}$ trở thành một nhóm với tích này, và 
+\[{T_{\left( {a',{a_{n + 1}}} \right)}}\left( {z',{z_{n + 1}}} \right) = \left( {a',{a_{n + 1}}} \right) \cdot \left( {z',{z_{n + 1}}} \right).\]
+
+Tương tự của hàm độ cao $\Im m\left[ z \right]$ trong một biến là hàm
+\[\rho \left( z \right) = \rho \left( {z',{z_{n + 1}}} \right) = \Im m\left[ {{z_{n + 1}}} \right] - \sum\limits_{j = 1}^n {{{\left| {{z_j}} \right|}^2}} .\]
+Một phép tính đơn giản chỉ ra rằng
+\begin{align}\label{63}
+\rho \left( {\left( {a',{a_{n + 1}}} \right) \cdot \left( {b',{b_{n + 1}}} \right)} \right) = \rho \left( {z',{z_{n + 1}}} \right) + \rho \left( {b',{b_{n + 1}}} \right).
+\end{align}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}\frametitle{Một nửa trên của không gian Siegal và biên của nó}
+$\mathbb{H}_{n}=\mathbb{C}^{n}\times\mathbb{R}$ với phép nhân này được gọi là nhóm Heisenberg $n$ chiều. Điểm $\left(0,0\right)$ là đơn vị, và $\left(-z,-t\right)$ là ảnh ngược của $\left(z,t\right)$. Dễ dàng kiểm tra $\left( {z,t} \right) \cdot \left( {w,s} \right) = \left( {w,s} \right) \cdot \left( {z,t} \right)$ nếu và chỉ nếu $\Im m\left[ {\left\langle {z,w} \right\rangle } \right] = 0$, vì thế nhóm thì không giao hoán. Đôi khi nó trở nên hữu ích để sử dụng những tọa độ thực trên $\mathbb{H}_{n}=\mathbb{C}_{n}\times\mathbb{R}=\mathbb{R}^{n}\times\mathbb{R}^{n}\times\mathbb{R}$. Do đó chúng ta viết ${z_j} = {x_j} + i{y_j}$, và viết $\left( {z,t} \right) = \left( {x,y,t} \right)$. Khi đó nhóm nhân Heisenberg được cho bởi
+\[\left( {x,y,t} \right) \cdot \left( {u,v,s} \right) = \left( {x + y,y + v,t + s + 2\left[ {\left\langle {y,u} \right\rangle  - \left\langle {x,v} \right\rangle } \right]} \right),\]
+với ${\left\langle {y,u} \right\rangle }$ và ${\left\langle {x,v} \right\rangle }$ thay cho tích trong Euclide thông thường trên $\mathbb{R}^{n}$.
+\end{frame}
+
+\begin{frame}\frametitle{Những phép tịnh tiến và vị tự trên $\mathbb{H}_{n}$}
+Định nghĩa $\left(2n+1\right)$ cụ thể với những toán tử đạo hàm riêng bậc nhất trên $\mathbb{H}_n$ như sau
+\[\left\{ \begin{array}{l}
+{X_j} = \frac{\partial }{{\partial {x_j}}} + 2{y_j}\frac{\partial }{{\partial t}},\\
+{Y_j} = \frac{\partial }{{\partial {y_j}}} - 2{x_j}\frac{\partial }{{\partial t}}.
+\end{array} \right.\]
+Với $1\le j\le n$, và 
+\[T = \frac{\partial }{{\partial t}}.\]
+Khi đó
+\[\begin{array}{*{20}{l}}
+{{L_{\left( {u,v,s} \right)}}{X_j}\left[ f \right]\left( {x,y,t} \right) = {X_j}\left[ f \right]\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)}\\
+\begin{array}{l}
+ = \frac{{\partial f}}{{\partial {x_j}}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {s,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)\\
+ + 2\left( {{y_j} - {v_j}} \right)\frac{{\partial f}}{{\partial t}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right).
+\end{array}
+\end{array}\]
+\end{frame}
+
+\begin{frame}\frametitle{Những phép tịnh tiến và vị tự trên $\mathbb{H}_{n}$}
+Mặt khác, ${L_{\left( {u,v,s} \right)}}\left[ f \right]\left( {x,y,t} \right) = f\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)$, theo sau đó
+\end{frame}
+
+\begin{frame}\frametitle{Những phép tịnh tiến và vị tự trên $\mathbb{H}_{n}$}
+\begin{eqnarray*}
+\begin{split}
+{X_j}{L_{\left( {u,v,s} \right)}}\left[ f \right]\left( {x,y,t} \right)\\
+ &= \frac{{\partial f}}{{\partial {x_j}}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)\\
+ &- 2{v_j}\frac{{\partial f}}{{\partial t}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)\\
+ &+ 2{y_j}\frac{{\partial f}}{{\partial t}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)\\
+& = \frac{{\partial f}}{{\partial {x_j}}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)\\
+ &+ 2\left( {{y_j} - {v_j}} \right)\\
+ &\frac{{\partial f}}{{\partial t}}\left( {x - u,y - v,t - s - 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right)\\
+ &= {L_{\left( {u,v,s} \right)}}{X_j}\left[ f \right]\left( {x,y,t} \right).
+\end{split}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}\frametitle{Những phép tịnh tiến và vị tự trên $\mathbb{H}_{n}$}
+Do đó $X_{j}$ là một toán tử bất biến trái. Mốt tính toán tương tự chỉ ra rằng $Y_{j}$ và $T$ cũng là bất biến trái\footnote{Nếu chúng ta định nghĩa phép tịnh tiến phải như sau
+\[\begin{array}{l}
+{R_{\left( {u,v,s} \right)}}\left[ f \right]\left( {x,y,t} \right) = f\left( {\left( {x,y,t} \right) \cdot {{\left( {u,v,s} \right)}^{ - 1}}} \right)\\
+ = f\left( {x - u,y - v,t - s + 2\left( {\left\langle {x,v} \right\rangle  - \left\langle {y,u} \right\rangle } \right)} \right),
+\end{array}\]
+và bất biến tịnh tiến phải một cách cách tự nhiên, thì $X_{j}$ và $Y_{j}$ thì không là bất biến phải. Thay vào đó, những toán tử bất biến phải tương ứng là 
+${\widetilde X_j} = \frac{\partial }{{\partial {x_j}}} - 2{y_j}\frac{\partial }{{\partial t}}$, ${\widetilde Y_j} = \frac{\partial }{{\partial {y_j}}} + 2{x_j}\frac{\partial }{{\partial t}}$, và $T = \frac{\partial }{{\partial t}}$.}.
+\end{frame}
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+Trong không gian Euclide $\mathbb{R}^n$, những đạo hàm riêng bậc nhất ${X_j} = \frac{\partial }{{\partial {x_j}}}$ là những bất biến phép tịnh tiến (Euclide), và toán tử Laplace được thu bằng việc lấy tổng của những bình phương với mọi $n$ của những toán tử này. Tương tự, bây giờ chúng ta xét một họ những toán tử bậc hai $\mathcal{L}_{\alpha}$ trên nhóm Heisenberg được cho bởi
+\end{frame}
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+\begin{eqnarray*}
+\begin{split}
+{L_\alpha } &= \frac{1}{4}\sum\limits_{j = 1}^n {\left( {X_j^2 + Y_j^2} \right)}  + i\alpha T\\
+ &= \frac{1}{4}\sum\limits_{j = 1}^n {\left[ {{{\left( {\frac{\partial }{{\partial {x_j}}} + 2{y_j}\frac{\partial }{{\partial t}}} \right)}^2} + {{\left( {\frac{\partial }{{\partial {y_j}}} - 2{x_j}\frac{\partial }{{\partial t}}} \right)}^2}} \right]}  + i\alpha \frac{\partial }{{\partial t}}\\
+ &= \frac{1}{4}\sum\limits_{j = 1}^n {\left[ {\frac{{{\partial ^2}}}{{\partial x_j^2}} + \frac{{{\partial ^2}}}{{\partial y_j^2}} + 4{y_j}\frac{{{\partial ^2}}}{{\partial {x_j}\partial t}} - 4{x_j}\frac{{{\partial ^2}}}{{\partial {y_j}\partial t}} + 4\left( {x_j^2 + y_j^2} \right)\frac{{{\partial ^2}}}{{\partial {t^2}}}} \right]} \\
+ &+ i\alpha \frac{\partial }{{\partial t}}
+\end{split}
+\end{eqnarray*}
+Khi $\alpha=0$, thì $\mathcal{L}_{0}$ được gọi là Sub-Laplace. 
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+Ngoại trừ $\alpha=\pm n, \pm\left(n+1\right),\ldots,$ toán tử $\mathbb{L}_{\alpha}$ có một nghiệm cơ bản $K_{\alpha}$. Toán tử $\mathcal{L}_{\alpha}$ là một tổ hợp của những toán tử bất biến trái $\left\{ {{X_j},{Y_j},T} \right\}$, và ta có thể hy vọng rằng toán tử $\mathcal{K}_{\alpha}$ là nghịch đảo của $\mathcal{L}_{\alpha}$ cũng có tính chất này. Nếu vậy, điều này có nghĩa là nếu
+\[{{\cal K}_\alpha }\left[ f \right]\left( {z,t} \right) = \int_{{\mathbb{C}^n} \times\mathbb{R} } {{K_\alpha }\left( {\left( {z,t} \right),\left( {w,s} \right)} \right)f\left( {w,s} \right)dwds} ,\]
+thì chúng ta có
+\end{frame}
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+\begin{eqnarray*}
+\begin{split}
+{{\cal K}_\alpha }\left[ f \right]\left( {z,t} \right)& = {L_{{{\left( {z,t} \right)}^{ - 1}}}}{{\cal K}_\alpha }\left[ f \right]\left( {0,0} \right)\\
+ &= {\cal K}{_\alpha }{L_{{{\left( {z,t} \right)}^{ - 1}}}}\left[ f \right]\left( {0,0} \right)\\
+ &= \int_{{\mathbb{C}^n} \times\mathbb{R} } {{K_\alpha }\left( {\left( {0,0} \right),\left( {w,s} \right)} \right){L_{{{\left( {z,t} \right)}^{ - 1}}}}\left[ f \right]\left( {ws} \right)dwds} \\
+ &= \int_{{\mathbb{C}^n} \times\mathbb{R} } {{K_\alpha }\left( {\left( {0,0} \right),\left( {w,s} \right)} \right)f\left( {\left( {z,t} \right),\left( {w,s} \right)} \right)dwds} \\
+& = \int_{{\mathbb{C}^n} \times\mathbb{R} } {{K_\alpha }\left( {\left( {0,0} \right),{{\left( {z,t} \right)}^{ - 1}} \cdot \left( {w,s} \right)} \right)f\left( {w,s} \right)dwds} \\
+& = \int_{{\mathbb{H}_n}} {f\left( {w,s} \right){k_\alpha }\left( {{{\left( {w,s} \right)}^{ - 1}} \cdot \left( {z,t} \right)} \right)dwds} \\
+& = \int_{{\mathbb{H}_n}} {f\left( {w,s} \right){L_{\left( {w,s} \right)}}\left[ {{k_\alpha }} \right]\left( {z,t} \right)dwds}, 
+\end{split}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+với ${k_\alpha }\left( {z,t} \right) = {K_\alpha }\left( {\left( {0,0} \right),{{\left( {z,t} \right)}^{ - 1}}} \right)$. Nhưng điều này thì chỉ đúng với phép nhân chập của $f$ với hàm $k_{\alpha}$ trên nhóm Heisenberg $\mathbb{H}_{n}$.
+\end{frame}
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+\begin{block}{Định lý Folland và Stein}
+Giả sử $\alpha\neq \pm n,\pm\left(n+1\right),\ldots$. Đặt 
+\[\begin{array}{l}
+{k_\alpha }\left( {z,t} \right)\\
+ = \frac{{{2^{n - 2}}}}{{{\pi ^{n + 1}}}}\Gamma \left( {\frac{{n + \alpha }}{2}} \right)\Gamma \left( {\frac{{n - \alpha }}{2}} \right){\left( {{{\left| z \right|}^2} - it} \right)^{ - \frac{{n + \alpha }}{2}}}{\left( {{{\left| z \right|}^2} + it} \right)^{ - \frac{{n - \alpha }}{2}}}.
+\end{array}\]
+Khi đó ${{\cal K}_\alpha }\left[ f \right] = f*{k_\alpha }$ là một nghiệm cơ bản cho $\mathcal{L}_{\alpha}$. Rõ ràng, nếu $\varphi\in C_{0}^{\infty}\left(\mathbb{H}_{n}\right)$, chúng ta có 
+\[\begin{array}{l}
+\varphi \left( {z,t} \right) = {{\cal K}_\alpha }\left[ {{{\cal L}_\alpha }\left[ \varphi  \right]} \right]\left( {z,t} \right),\\
+\varphi \left( {z,t} \right) = {{\cal L}_\alpha }\left[ {{{\cal K}_\alpha }\left[ \varphi  \right]} \right]\left( {z,t} \right).
+\end{array}\]
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+Do vậy $K_{0}\left(x,y,t\right)$ có bậc thuần nhất là $-2$ tuân theo những phép vị tự $\left\{D_{\mathbb{H},\delta}\right\}$ và sự liên tục và không giản ước xa khỏi $\left(0,0,0\right)$, theo sau đó 
+\[{K_0}\left( {x,y,t} \right) \approx \left\| {\left( {x,y,t} \right)} \right\|_\mathbb{H}^{ - 2} \approx \left\| {\left( {x,y,t} \right)} \right\|_\mathbb{H}^{ + 2}{\left| {{\mathbb{B}_\mathbb{H}}\left( {0;{{\left\| {\left( {x,y,t} \right)} \right\|}_\mathbb{H}}} \right)} \right|^{ - 1}},\]
+với ký hiệu $\approx$ nghĩa là tỉ số của hai vế bị chặn và bị chặn xa khác $0$ bằng những hằng số không phụ thuộc vào $\left(x,y,t\right)$. Do đó nếu chúng ta lấy khoảng cách từ  điểm $\left(0,0,0\right)$ điểm điểm $\left(x,y,t\right)$ thì 
+\[{d_\mathbb{H}}\left( {\left( {x,y,t} \right),\left( {0,0,0} \right)} \right) = {\left\| {\left( {x,y,t} \right)} \right\|_\mathbb{H}} = {\left( {{{\left( {{x^2} + {y^2}} \right)}^2} + {t^2}} \right)^{\frac{1}{4}}},\]
+chúng ta có
+\end{frame}
+
+
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+\begin{eqnarray*}
+\begin{split}
+K\left( {\left( {x,y,t} \right),\left( {0,0,0} \right)} \right) &= {K_0}\left( {x,y,t} \right)\\
+ &\approx {d_\mathbb{H}}{\left( {\left( {x,y,t} \right),\left( {0,0,0} \right)} \right)^2}\\
+ &{\left| {{\mathbb{B}_\mathbb{H}}\left( {0;{d_\mathbb{H}}\left( {\left( {x,y,t} \right),\left( {0,0,0} \right)} \right)} \right)} \right|^{ - 1}}.
+\end{split}
+\end{eqnarray*}
+Hơn nữa, $K\left( {\left( {x,y,t} \right),\left( {u,v,s} \right)} \right) = {K_0}\left( {{{\left( {u,v,s} \right)}^{ - 1}} \cdot \left( {x,y,t} \right)} \right)$. Điều này đề nghị chúng ta nên đặt
+\begin{eqnarray*}
+\begin{split}
+&{d_\mathbb{H}}\left( {\left( {x,y,t} \right),\left( {u,v,s} \right)} \right) = {d_\mathbb{H}}\left( {{{\left( {u,v,s} \right)}^{ - 1}} \cdot \left( {x,y,t} \right),\left( {0,0,0} \right)} \right)\\
+ &= {\left( {{{\left( {{{\left( {x - u} \right)}^2} + {{\left( {y - v} \right)}^2}} \right)}^2} + {{\left( {t - s - 2\left( {xv - yu} \right)} \right)}^2}} \right)^{\frac{1}{4}}},
+\end{split}
+\end{eqnarray*}
+và những quả cầu tương ứng
+\[{\mathbb{B}_\mathbb{H}}\left( {\left( {x,y,t} \right);\delta } \right) = \left\{ {\left( {u,v,s} \right) \in {\mathbb{R}^3}|{d_\mathbb{H}}\left( {\left( {x,y,t} \right),\left( {u,v,s} \right)} \right) < \delta } \right\}.\]
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+Có thể chỉ ra rằng hàm $d_\mathbb{H}$ có những tính chất sau đây
+\begin{itemize}
+\item[(1)] ${d_\mathbb{H}}\left( {\left( {x,y,t} \right),\left( {u,v,s} \right)} \right) \ge 0$ và ${d_\mathbb{H}}\left( {\left( {x,y,t} \right),\left( {u,v,s} \right)} \right) = 0$ nếu và chỉ nếu $\left(x,y,t\right)=\left(u,v,s\right)$.
+\item[(2)] $d_{\mathbb{H}}\left(\left(x,y,t\right),\left(u,v,s\right)\right)=d_{\mathbb{H}}\left(\left(u,v,s\right),\left(x,y,t\right)\right)$.
+\item[(3)] Có một hằng số $C\ge 1$ để nếu $\left( {{x_j},{y_j},{t_j}} \right) \in {\mathbb{R}^3}$ với $1\le j\le3$ thì
+\[\begin{array}{l}
+{d_\mathbb{H}}\left( {\left( {{x_1},{y_1},{t_1}} \right),\left( {{x_3},{y_3},{t_3}} \right)} \right)\\
+ \le C\left[ {{d_\mathbb{H}}\left( {\left( {{x_1},{y_1},{t_1}} \right),\left( {{x_2},{y_2},{t_2}} \right)} \right) + {d_\mathbb{H}}\left( {\left( {{x_2},{y_2},{t_2}} \right),\left( {{x_3},{y_3},{t_3}} \right)} \right)} \right].
+\end{array}\]  
+\end{itemize}
+Chú ý rằng quả cầu $\mathbb{B}_{\mathbb{H}}\left(0;\delta\right)$ thì so sánh được với tập hợp
+
+\end{frame}
+
+
+
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+\[\left\{ {\left( {u,v,s} \right)|\left| u \right| < \delta ,\left| v \right| < \delta ,\left| s \right| < {\delta ^2}} \right\},\]
+và do đó có cùng dị hướng tự nhiên như quả cầu $\mathbb{B}_{\mathbb{H}}\left(0;\delta\right)$ chúng ta đã dùng cho phương trình nhiệt. Tuy nhiên, quả cầu $\mathbb{B}_{\mathbb{H}\left(\left(x,y,t\right);\delta\right)}$ là phép tịnh tiến Heisenberg của quả cầu tại gốc, không phải phép tịnh tiến Euclide, để điểm $\left(x,y,t\right)$. Do đó ngoài dị hướng, quả cầu $\mathbb{B}_{\mathbb{H}}\left(\left(x,y,t\right);\delta\right)$ cũng có một sự thay đổi. Quả cầu thì so sánh được với tập hợp
+\[\left\{ {\left( {u,v,s} \right)|\left| {u - x} \right| < \delta ,\left| {v - y} \right| < \delta ,\left| {s - t + 2\left( {xv - yu} \right)} \right| < {\delta ^2}} \right\},\]
+và đo đó có kích cỡ $\delta$ theo hướng $u$ và $v$, và kích cỡ $\delta^{2}$ dọc theo mặt phẳng $s=t-2\left(vx-uy\right)$.
+\end{frame}
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+Chúng ta cũng có những ước lượng cho nghiệm cơ bản $K$ theo dạng hình học. Chúng ta hãy viết $p=\left(x,y,t\right)$ và $q=\left(u,v,s\right)$. Khi đó
+\begin{align}\label{65}
+K\left(p,q\right)\approx d_{\mathbb{H}}\left(p,q\right)^{2}\left|\mathbb{B}_{\mathbb{H}}\left(p;d_{\mathbb{H}}\left(p,q\right)\right)\right|^{-1},
+\end{align}
+\end{frame}
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+Xét $P^{\alpha}\left(X,Y\right)$ là một đa thức không giao hoán bậc $\alpha$ trong những toán tử $X$ và $Y$, chúng ta cho phép nó ảnh hưởng đến những biến $p=\left(x,y,t\right)$ hay $q=\left(u,v,s\right)$. Khi đó có một hằng số $C_\alpha$ để
+\begin{align}\label{66}
+\left| {{P^\alpha }\left( {X,Y} \right)K\left( {p,q} \right)} \right| \le {C_\alpha }{d_\mathbb{H}}{\left( {p,q} \right)^{2 - \alpha }}{\left| {{\mathbb{B}_\mathbb{H}}\left( {p;{d_\mathbb{H}}\left( {p,q} \right)} \right)} \right|^{ - 1}}.
+\end{align}
+Chúng ta không có chỉ rõ ra lợi ích của phép lấy vi phân liên quan đến $T$. Tuy nhiên một điểm mấu chốt là $T$ có thể được viết dưới dạng của $X$ và $Y$. Chúng ta có
+\begin{align}\label{67}
+XY-YX=-4T,
+\end{align}
+\end{frame}
+
+
+\begin{frame}\frametitle{Sub-Laplace và các tính chất hình học liên quan}
+và vì thế sự tác động của $T$ thì khác với những đơn thức bậc hai $X$ và $T$. Do đó chúng ta có thể xây dựng công thức một phát biểu tổng quát về sự khả vi từ \eqref{66} và \eqref{67}. Xét ${P^{\alpha ,\beta }}\left( {X,Y,T} \right)$ là một đa thức không giao hoán với bậc $\alpha$ theo $X$ và $Y$, và bậc $\beta$ theo $T$. Những toán tử này có thể tác động đến những biến hoặc $p=\left(x,y,t\right)$ hoặc $q=\left(u,v,s\right)$. Khi đó có một hằng số $C_{\alpha,\beta}$ để
+\begin{align}\label{68}
+\left| {{P^{\alpha ,\beta }}\left( {X,Y} \right)K\left( {p,q} \right)} \right| \le {C_{\alpha ,\beta }}{d_\mathbb{H}}{\left( {p,q} \right)^{2 - \alpha  - 2\beta }}{\left| {{\mathbb{B}_\mathbb{H}}\left( {p;{d_\mathbb{H}}\left( {p,q} \right)} \right)} \right|^{ - 1}}.
+\end{align}
+Do đó $d_{\mathbb{H}}$ rất giống một metric, nhưng thỏa mãn được dạng yếu của bất đẳng thức tam giác được cho trong \textbf{(3)}. Điều này đủ cho nhiều mục đích, và cuối cùng chúng ta sẽ thấy rằng có một metric thật sự sao cho metric những quả cầu thì tường đương với những quả cầu được định nghĩa bởi $d_{\mathbb{H}}$.
+\end{frame}
+
+
+\begin{frame}\frametitle{Không gian $H^{2}\left(\mathbb{H}_{n}\right)$ và toán tử chiếu Szeg\"o}
+Bây giờ chúng ta định nghĩa tương tự với không gian Bergman-Szeg\"o cổ điển $H^{2}\left(\mathbb{D}\right)$ trong đĩa đơn vị. Xét những toán tử đạo hàm riêng phức $n$  bậc nhất trên $\mathbb{H}^{n}$ được cho bởi 
+\[{\overline Z _j} = \frac{1}{2}\left[ {{X_j} + i{Y_j}} \right] = \frac{1}{2}\left[ {\frac{\partial }{{\partial {x_j}}} + i\frac{\partial }{{\partial {y_j}}}} \right] - i\left( {{x_j} + i{y_j}} \right)\frac{\partial }{{\partial t}} = \frac{\partial }{{\partial {{\bar z}_j}}} - i{z_j}\frac{\partial }{{\partial t}},\]
+với $1\le j\le n$, bây giờ ở đây chúng ta viết ${z_j} = {x_j} + i{y_j}$, ${\overline z _j} = {x_j} - i{y_j}$, và 
+\[\begin{array}{l}
+\frac{\partial }{{\partial {z_j}}} = \frac{1}{2}\left[ {\frac{\partial }{{\partial {x_j}}} + i\frac{\partial }{{\partial {y_j}}}} \right],\\
+\frac{\partial }{{\partial {z_j}}} = \frac{1}{2}\left[ {\frac{\partial }{{\partial {x_j}}} - i\frac{\partial }{{\partial {y_j}}}} \right].
+\end{array}\]
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Không gian $H^{2}\left(\mathbb{H}_{n}\right)$ và toán tử chiếu Szeg\"o}
+Nếu $f\in L^{2}\left(\mathbb{H}_{n}\right)$, chúng ta nói $\overline{Z}_{j}\left[f\right]=0$ nếu những phương trình này giữ trong phương phân bố; nghĩa là với mọi $\varphi\in C_0^\infty\left(\mathbb{H}_{n}\right)$ chúng ta có
+\[\int_{{\mathbb{H}_n}} {f\left( {z,t} \right)\overline {{Z_j}\left[ f \right]\left( {z,t} \right)} dzdt}  = 0.\]
+Chúng ta gọi 
+\begin{align}\label{69}
+{H^2}\left( {{\mathbb{H}_n}} \right) = \left\{ {f \in {L^2}\left( {{\mathbb{H}_n}} \right)|{{\overline Z }_j}\left[ f \right] = 0,1 \le j \le n} \right\}
+\end{align}
+là không gian Bergman-Szeg\"o.
+Theo định nghĩa này $H^{2}\left(\mathbb{H}_{n}\right)$ là một không gian con đóng của $L^{2}\left(\mathbb{H}_{n}\right)$. Tương tự có thể kiểm tra rằng nếu chúng ta  đặt
+\[{f_\alpha }\left( {z,t} \right) = {\left( {1 + {{\left| z \right|}^2} + it} \right)^{ - \alpha }} = {\left( {1 + \sum\limits_{j = 1}^n {{{\left| {{z_j}} \right|}^2} + it} } \right)^{ - \alpha }},\]
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Không gian $H^{2}\left(\mathbb{H}_{n}\right)$ và toán tử chiếu Szeg\"o}
+thì $f_{\alpha}\in H^{2}\left(\mathbb{H}_{n}\right)$ với mọi $\alpha>n+1$. Do đó không gian $H^{2}\left(\mathbb{H}_{n}\right)$ thì khác không, và thực ra là vô hạn chiều. Toán tử chiếu Szeg\"o $\mathcal{S}:L^{2}\left(\mathbb{H}_{n}\right)\to H^{2}\left(\mathbb{H}_{n}\right)$ là toán tử chiếu trực giao của $L^{2}\left(\mathbb{H}_{n}\right)$ lên $H^{2}\left(\mathbb{H}_{n}\right)$. Mục tiêu của chúng ta trong chương này là để mô tả $\mathcal{S}$ như một toán tử tích phân kỳ dị.
+\end{frame}
+
+
+\begin{frame}\frametitle{Không gian $H^{2}\left(\mathbb{H}_{n}\right)$ và toán tử chiếu Szeg\"o}
+Với $\varphi\in\mathcal{S}\left(\mathbb{C}^{n}\times\mathbb{R}\right)$, định nghĩa biến đổi Fourier riêng phần $\mathcal{F}$ theo biến $t$ bằng cách đặt 
+\[{\cal F}\left[ \varphi  \right]\left( {z,\tau } \right) = \widehat \varphi \left( {z,\tau } \right) = \int_\mathbb{R} {{e^{ - 2\pi it\tau }}\varphi \left( {z,t} \right)dt} .\]
+Khi đó hàm ngược là
+\[\varphi \left( {z,\tau } \right) = {{\cal F}^{ - 1}}\left[ {\widehat \varphi } \right]\left( {z,\tau } \right) = \int_\mathbb{R} {{e^{ + 2\pi it\tau }}\varphi \left( {z,t} \right)d\tau } .\]
+Những ánh xạ biến đổi Fourier từng phần là từ không gian Schwartz $\mathcal{S}\left(\mathbb{C}^{n}\times\mathbb{R}\right)$ lên chính nó, và đơn ánh. Theo công thức Plancherel nó mở rộng lên một một phép đẳng cự của $L^{2}\left(\mathbb{C}^{n}\times\mathbb{R}\right)$. Sử dụng biến đổi Fourier từng phần, chúng ta chỉ ra rằng không gian $H^{2}\left(\mathbb{C}^{n}\times\mathbb{R}\right)$ có thể được đồng nhất với những không gian có trọng của những hàm chỉnh hình.
+\end{frame}
+
+
+
+
+
+\begin{frame}\frametitle{Không gian $H^{2}\left(\mathbb{H}_{n}\right)$ và toán tử chiếu Szeg\"o}
+Chúng ta hãy đặt $\lambda\left(z,\tau\right)=e^{2\tau\left|z\right|^{2}}dzd\tau$, và định nghĩa toán tử
+\[M\left[ \psi  \right]\left( {z,\tau } \right) = {e^{ - \tau {{\left| z \right|}^2}}}\psi \left( {z,\tau } \right).\]
+Khi đó $M\mathcal{F}:L^{2}\left(\mathbb{C}^{n}\times\mathbb{R}\right)\to L^{2}\left(\mathbb{C}^{n}\times\mathbb{R};d\lambda\right)$ là một phép đẳng cự. Chúng ta đặt 
+\[{B^2} = M{\cal F}\left[ {{H^2}\left( {{\mathbb{C}^n} \times {\mathbb{R}^n}} \right)} \right].\]
+\end{frame}
+
+
+
+
+\begin{frame}\frametitle{Không gian $H^{2}\left(\mathbb{H}_{n}\right)$ và toán tử chiếu Szeg\"o}
+\begin{block}{Mệnh đề}
+Một hàm $g$ đo được trên $\mathbb{C}^{n}\times\mathbb{R}$ thuộc vào $B^{2}$ nếu và chỉ nếu 
+\begin{itemize}
+\item[(1)]$\int_{{\mathbb{C}^n} \times\mathbb{R} } {{{\left| {g\left( {z,\tau } \right)} \right|}^2}{e^{2\tau {{\left| z \right|}^2}}}dzd\tau }  = {\left\| g \right\|^2} <  + \infty .$
+\item[(2)] Với hầu hết mọi $\tau\in\mathbb{R}$, hàm $z\to g\left(z,\tau\right)$ là một hàm nguyên chỉnh hình trên $\mathbb{C}^{n}$.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Không gian có trọng của những hàm nguyên}
+Với mỗi $\tau\in\mathbb{R}$, Xét $L_\tau ^2\left( {{\mathbb{C}^n}} \right) = L_\tau ^2$ ký hiệu không gian (những lớp tương đương) của những hàm đo được $g:\mathbb{C}^{n}\to\mathbb{C}$ sao cho 
+\[\left\| g \right\|_\tau ^2 = \int_{{\mathbb{C}^n}} {\left| {g\left( z \right)} \right|{e^{ - 2\tau {{\left| z \right|}^2}}}dm\left( z \right)}  <  + \infty .\]
+Xét $L_\tau^2$ là một không gian Hilbert, và chúng ta xét không gian con
+\begin{center}
+$B_\tau ^2\left( {{\mathbb{C}^n}} \right) = B_\tau ^2 = \{ g \in L_\tau ^2\left( {{\mathbb{C}^n}} \right)|g$ là hàm chỉnh hình$\}$.
+\end{center}
+\end{frame}
+
+
+\begin{frame}\frametitle{Không gian có trọng của những hàm nguyên}
+Sử dụng ý nghĩa tính chất giá trị của những hàm chỉnh hình, theo đó với bất kỳ $z\in\mathbb{C}^{n}$ và bất kỳ $g\in B_{\tau}^{2}$ chúng ta có
+\[\left| {g\left( z \right)} \right| \le \frac{{2n}}{{{\omega _n}}}\int_{\left| {z - w} \right| < 1} {\left| {g\left( w \right)} \right|dm\left( w \right)}  \le \frac{{2n}}{{{\omega _{2n}}}}{\left[ {\int_{\left| {z - w} \right| < 1} {{e^{2\tau {{\left| w \right|}^2}}}dm\left( w \right)} } \right]^{\frac{1}{2}}}{\left\| g \right\|_\tau }.\]
+Theo đó $B_{\tau}^{2}$ là một không gian con đóng của $L_{\tau}^{2}$.
+\end{frame}
+
+
+\begin{frame}\frametitle{Không gian có trọng của những hàm nguyên}
+\begin{block}{Mệnh đề}
+Nếu $\tau\le 0$, không gian $B_{\tau}^{2}=\left(0\right)$. Nếu $\tau>0$,
+\begin{itemize}
+\item[(1)] Mỗi đơn thức $z^\alpha\in B_{\tau}^{2}$, $\left\| {{z^\alpha }} \right\|_\tau ^2 = {\pi ^n}\alpha !{\left( {2\tau } \right)^{ - \left| \alpha  \right| - n}}$, và ${\left\langle {{z^\alpha },{z^\beta }} \right\rangle _\tau } = 0$ nếu $\alpha\neq\beta$. Nếu
+\[\begin{array}{l}
+c_\alpha ^2 = {\left( {{\pi ^n}\alpha !{{\left( {2\tau } \right)}^{ - \left| \alpha  \right| - n}}} \right)^{ - 1}},\\
+{\varphi _\alpha }\left( z \right) = {c_\alpha }{z^\alpha },
+\end{array}\]
+thì $\left\{\varphi_{\alpha}\right\}$ là một dãy trực chuẩn trong $B_{\alpha}^{2}$.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Không gian có trọng của những hàm nguyên}
+\begin{block}{Mệnh đề}
+\begin{itemize}
+\item[(2)] Nếu $g\in B_{\tau}^{2}$, thì với mỗi $z\in\mathbb{C}^n$
+\[g\left( z \right) = \sum\limits_\alpha  {\left\langle {g,{\varphi _\alpha }} \right\rangle {\varphi _\alpha }\left( z \right)} ,\]
+với chuỗi hội tụ đều về những tập con compact của $\mathbb{C}^n$ và chuỗi $\sum\limits_\alpha  {\left\langle {g,{\varphi _\alpha }} \right\rangle {\varphi _\alpha }} $ hội tụ về $g$ trong không gian Hilbert $B_{\alpha}^{2}$.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Không gian có trọng của những hàm nguyên}
+\begin{block}{Bổ đề}
+Xét $P_{\tau}:L_{\tau}^2\to B_\tau^2$ là toán tử chiếu trực giao. Với $h\in 	L_{\tau}^2$,
+\[{P_\tau }\left[ h \right]\left( z \right) = {\left( {\frac{2}{\pi }} \right)^n}{\tau ^n}\int_{{\mathbb{C}^n}} {h\left( w \right){e^{2\tau \left\langle {z,w} \right\rangle  - 2\tau {{\left| w \right|}^2}}}dm\left( w \right)} .\]
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Tài liệu tham khảo}
+\begin{thebibliography}{99}
+\bibitem{Ste70}{\bf Elias M. Stein}.{\it Singular Integrals and Differentiability Properties of Functions}.  Princeton Mathematical Series; 30. Princeton University Press, Princeton, New Jersey, 1970.
+\end{thebibliography}
+\end{frame}
+
+\end{document}
